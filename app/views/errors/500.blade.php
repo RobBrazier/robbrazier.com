@@ -1,0 +1,2 @@
+@extends('layouts.default')
+<?php $content = '<h1 style="text-align:center">500</h1><h2 style="text-align:center">Something\'s gone terribly wrong, try refreshing, or come back a bit later, the problem should have gone away (hopefully)</h1>'; ?>
