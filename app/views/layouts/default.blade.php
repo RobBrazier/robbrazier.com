@@ -25,7 +25,6 @@
 	<div class="container">
 		{{ $content }}
 	</div>
-    <a href='https://alpha.app.net/robbrazier' rel='me' style="display:none;visibility:hidden" aria-hidden="true">robbrazier @ app.net</a>
 	{{--HTML::script('assets/js/scripts.js')--}}
 	<script>
 	$(function() {
@@ -52,20 +51,17 @@
 		});
 	});
 	</script>
-	<!-- Piwik -->
-	<script type="text/javascript">
-		var _paq = _paq || [];
-		_paq.push(["trackPageView"]);
-		_paq.push(["enableLinkTracking"]);
-
-		(function() {
-			var u=(("https:" == document.location.protocol) ? "https" : "http") + "://stats.robbrazier.com/";
-			_paq.push(["setTrackerUrl", u+"piwik.php"]);
-			_paq.push(["setSiteId", "2"]);
-			var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-			g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-		})();
+	<script>
+	    var clicky_site_ids = clicky_site_ids || [];
+            clicky_site_ids.push(100840739);
+            (function() {
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = '//static.getclicky.com/js';
+                ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+            })();
 	</script>
-	<!-- End Piwik Code -->
+	<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100840739ns.gif"/></p></noscript>
 </body>
 </html>
