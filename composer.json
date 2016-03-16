@@ -7,8 +7,8 @@
 		"laravel/framework": "4.1.*",
 		"way/generators": "3",
 		"vtalbot/markdown": "1.*",
-		"fitztrev/laravel-html-minify": "dev-master",
-		"daylerees/kurenai": "dev-master"
+		"fitztrev/laravel-html-minify": "1.0.3",
+		"daylerees/kurenai": "1.1.0"
 	},
 	"autoload": {
 		"classmap": [
