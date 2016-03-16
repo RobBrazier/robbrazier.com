@@ -13,19 +13,20 @@ I am also working with, and maintaining Linux Virtual Servers, so I have experie
 If you want to contact me, I'd recommend using twitter [@robbrazier_](https://twitter.com/robbrazier_)
 I am currently working as a developer at Barclays.
 
-Programming Languages
----------------------
-- PHP
-- HTML
-- CSS
-- JavaScript
-- JavaScript (jQuery)
-- Java
-- Go
+Technologies
+------------
+**Key**: ***20%*** Beginner ***40%*** Familiar ***60%*** Proficient ***80%*** Expert ***100%*** Master
+- PHP ***(80%)***
+- HTML ***(80%)***
+- CSS ***(60%)***
+- JavaScript ***(80%)***
+- JavaScript (jQuery) ***(80%)***
+- Java ***(80%)***
+- Go ***(20%)***
 
 Connect With Me
 ---------------
 I can be found on the following websites:
-[Github](https://github.com/RobBrazier)
-[LinkedIn](https://uk.linkedin.com/in/robbrazier1)
-[Twitter](https://twitter.com/robbrazier_)
+[Github](https://github.com/RobBrazier) - I Host most of my Open Source Projects here
+[LinkedIn](https://uk.linkedin.com/in/robbrazier1) - I... Have an account, nothing much more to say
+[Twitter](https://twitter.com/robbrazier_) - I usually post status updates for my websites here, and this is the best way to contact me
