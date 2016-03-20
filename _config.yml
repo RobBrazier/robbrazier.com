@@ -79,3 +79,4 @@ feed:
 alias:
   contact/index.html: about/
   projects/laravel-piwik/index.html: http://laravel-piwik.robbrazier.com
+  blog/index.html: /
