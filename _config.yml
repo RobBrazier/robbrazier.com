@@ -80,3 +80,11 @@ alias:
   contact/index.html: about/
   projects/laravel-piwik/index.html: http://laravel-piwik.robbrazier.com
   blog/index.html: /
+
+markdown:
+  render:
+    html: true
+    breaks: true
+    typographer: true
+  plugins:
+    - markdown-it-attrs
