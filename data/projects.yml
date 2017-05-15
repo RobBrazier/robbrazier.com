@@ -1,0 +1,16 @@
+name: Projects
+source:
+  - icon: fa fa-github
+    title: Laravel-Piwik
+    link: https://laravel-piwik.robbrazier.com
+    description: A Laravel package to interface with the Piwik API
+
+  - icon: fa fa-globe
+    title: entitydecode.com
+    link: https://entitydecode.com
+    description: A Real-time HTML entity encoder/decoder
+
+  - icon: fa fa-globe
+    title: mypcspecs.io
+    link: https://mypcspecs.io
+    description: A signature/image generator for PC details for use on forums etc.
