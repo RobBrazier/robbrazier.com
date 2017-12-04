@@ -14,3 +14,8 @@ source:
     title: mypcspecs.io
     link: https://mypcspecs.io
     description: A signature/image generator for PC details for use on forums etc.
+  
+  - icon: fa fa-github
+    title: Svelte-Awesome
+    link: https://github.com/RobBrazier/svelte-awesome
+    description: A Font-Awesome component for Svelte.js, using inline SVG
