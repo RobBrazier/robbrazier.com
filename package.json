@@ -6,7 +6,8 @@
   "scripts": {
     "assets": "gulp assets",
     "assets:watch": "gulp assets:watch",
-    "build": "run-s assets dump hugo",
+    "minify": "gulp minify",
+    "build": "run-s assets dump hugo minify",
     "dump": "dato dump",
     "dump:watch": "npm run dump -- --watch",
     "hugo": "hugo",
@@ -26,6 +27,7 @@
     "globby": "^7.1.1",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
+    "gulp-pretty-data": "^0.2.0",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",

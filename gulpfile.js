@@ -10,6 +10,7 @@ const buffer = require('vinyl-buffer');
 const through = require('through2');
 const moduleImporter = require('node-sass-tilde-importer');
 const watch = require('gulp-watch');
+const prettify = require('gulp-pretty-data');
 
 gulp.task('assets:css', () => {
     gulp.src('assets/css/*')
@@ -51,6 +52,20 @@ gulp.task('assets:js', () => {
     return bundledStream;
     
 });
+
+gulp.task('minify:html', () => {
+    gulp.src('public/**/*.{html,xml}')
+        .pipe(prettify({
+            type: 'minify',
+            extensions: {
+                'html': 'xml',
+                'xml': 'xml'
+            }
+        }))
+        .pipe(gulp.dest('public'));
+})
+
+gulp.task('minify', ['minify:html']);
 
 gulp.task('assets:watch', ['assets:css', 'assets:js'], () => {
     gulp.watch('assets/css/*.scss', ['assets:css']);

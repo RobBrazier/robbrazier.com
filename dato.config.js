@@ -41,7 +41,6 @@ module.exports = (dato, root, i18n) => {
 //   });
 
   // Create a YAML data file to store global data about the site
-  console.log(dato._index);
   root.createDataFile('data/settings.yml', 'yaml', {
     name: dato.site.globalSeo.siteName,
     language: dato.site.locales[0],
