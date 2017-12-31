@@ -1,0 +1,15 @@
+{{ partial "header" . }}
+<section class="section">
+  <h1 class="title has-text-centered">
+    <a href="{{ .Params.link }}">{{ .Title }}</a>
+  </h1>
+  {{ with .Params.image }}
+  <figure class="image">
+    <img src="{{ . }}">
+  </figure>
+  {{ end }}
+  <div class="content">
+    {{ .Content }}
+  </div>
+</section>
+{{ partial "footer" . }}

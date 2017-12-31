@@ -1,0 +1,45 @@
+{
+  "name": "robbrazier.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "assets": "gulp assets",
+    "assets:watch": "gulp assets:watch",
+    "build": "run-s assets dump hugo",
+    "dump": "dato dump",
+    "dump:watch": "npm run dump -- --watch",
+    "hugo": "hugo",
+    "serve": "hugo serve",
+    "start": "run-p assets:watch dump:watch serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobBrazier/robbrazier.com.git"
+  },
+  "author": "Rob Brazier",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^14.5.0",
+    "bubleify": "^1.1.0",
+    "datocms-client": "^0.3.41",
+    "globby": "^7.1.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "html-tag": "^2.0.0",
+    "hugo-bin": "^0.18.1",
+    "node-sass-tilde-importer": "^1.0.0",
+    "npm-run-all": "^4.1.2",
+    "sass-module-importer": "^1.4.0",
+    "through2": "^2.0.3",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "bulma": "^0.6.1",
+    "domready": "^1.0.8"
+  }
+}

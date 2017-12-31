@@ -7,3 +7,4 @@
 /about /
 /resume https://www.visualcv.com/rob-brazier
 /cv https://www.visualcv.com/rob-brazier
+/blog/* /posts/:splat

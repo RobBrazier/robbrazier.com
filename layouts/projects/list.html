@@ -1,0 +1,22 @@
+{{ partial "header" . }}
+<section class="section">
+  <h3 class="subtitle is-4 has-text-centered">Projects</h3>
+  <div class="content">
+    {{ range .Data.Pages }}
+    <div class="columns">
+        <div class="column is-one-third has-text-right">
+          {{ range .Params.categories }}
+            <h5>{{ . }}</h5>
+          {{ end }}
+        </div>
+        <div class="column is-two-thirds">
+          <strong>
+            <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+          </strong>
+          <p>{{ .Params.description }}</p>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ partial "footer" . }}
