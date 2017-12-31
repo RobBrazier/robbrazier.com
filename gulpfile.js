@@ -18,7 +18,7 @@ gulp.task('assets:css', () => {
             outputStyle: 'compressed',
             importer: moduleImporter
         }))
-        .pipe(concat('app.css'))
+        .pipe(concat('main.css'))
         .pipe(gulp.dest('static/css'));
 });
 
@@ -26,7 +26,7 @@ gulp.task('assets:js', () => {
     var bundledStream = through();
     
     bundledStream
-        .pipe(source('app.js'))
+        .pipe(source('main.js'))
         .pipe(buffer())
         .pipe(uglify())
         .pipe(gulp.dest('static/js'));
