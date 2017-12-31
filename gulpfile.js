@@ -54,7 +54,7 @@ gulp.task('assets:js', () => {
 });
 
 gulp.task('minify:html', () => {
-    gulp.src('public/**/*.{html,xml}')
+    return gulp.src('public/**/*.{html,xml}')
         .pipe(prettify({
             type: 'minify',
             extensions: {
