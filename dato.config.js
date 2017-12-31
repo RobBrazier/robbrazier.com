@@ -68,7 +68,6 @@ module.exports = (dato, root, i18n) => {
         frontmatter: {
           title: project.title,
           link: project.link,
-          section: project.icon,
           description: project.seoMetaTags.filter(tag => {
             if (typeof tag.attributes !== 'undefined' && typeof tag.attributes.name !== 'undefined') {
               return tag.attributes.name === 'description';
