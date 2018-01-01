@@ -7,6 +7,8 @@ languageCode = "en-gb"
 [params]
   author = "Rob Brazier"
 
+disqusShortName = "robbrazier-com"
+
 ## Main Menu
 [[menu.main]]
   name = "posts"
