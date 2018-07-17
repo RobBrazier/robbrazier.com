@@ -1,8 +1,8 @@
 /contact/index.html /
 /contact /
 /about /
-/resume https://www.visualcv.com/rob-brazier
-/cv https://www.visualcv.com/rob-brazier
+/resume https://www.visualcv.com/robbrazier
+/cv https://www.visualcv.com/robbrazier
 /blog/* /posts/:splat
 /portfolio/* /projects/:splat
 https://www.robbrazier.co.uk/* https://robbrazier.co.uk/:splat 301!
