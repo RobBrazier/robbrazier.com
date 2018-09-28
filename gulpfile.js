@@ -13,7 +13,7 @@ const watch = require('gulp-watch');
 const prettify = require('gulp-pretty-data');
 
 gulp.task('assets:css', () => {
-    gulp.src('assets/css/*')
+    return gulp.src('assets/css/*')
         .pipe(sass({
             outputStyle: 'compressed',
             importer: moduleImporter
@@ -24,7 +24,7 @@ gulp.task('assets:css', () => {
 
 gulp.task('assets:js', () => {
     var bundledStream = through();
-    
+
     bundledStream
         .pipe(source('main.js'))
         .pipe(buffer())
@@ -40,7 +40,7 @@ gulp.task('assets:js', () => {
                 bubleify
             ]
         });
-    
+
         // pipe the Browserify stream into the stream we created earlier
         // this starts our gulp pipeline.
         b.bundle().pipe(bundledStream);
@@ -50,7 +50,6 @@ gulp.task('assets:js', () => {
     });
 
     return bundledStream;
-    
 });
 
 gulp.task('minify:html', () => {
@@ -63,13 +62,13 @@ gulp.task('minify:html', () => {
             }
         }))
         .pipe(gulp.dest('public'));
-})
+});
 
-gulp.task('minify', ['minify:html']);
+gulp.task('minify', gulp.series('minify:html'));
 
-gulp.task('assets:watch', ['assets:css', 'assets:js'], () => {
-    gulp.watch('assets/css/*.scss', ['assets:css']);
-    gulp.watch('assets/js/*.js', ['assets:js']);
-})
+gulp.task('assets', gulp.series('assets:css', 'assets:js'));
 
-gulp.task('assets', ['assets:css', 'assets:js']);
+gulp.task('assets:watch', gulp.series('assets', () => {
+    gulp.watch('assets/css/*.scss', gulp.series('assets:css'));
+    gulp.watch('assets/js/*.js', gulp.series('assets:js'));
+}));
