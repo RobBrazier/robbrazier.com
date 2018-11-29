@@ -3,5 +3,5 @@
 /about /
 /blog/* /posts/:splat
 /portfolio/* /projects/:splat
-https://robbrazier.co.uk/* https://www.robbrazier.co.uk/:splat 301!
-https://robbrazier.uk/* https://www.robbrazier.uk/:splat 301!
+https://www.robbrazier.co.uk/* https://robbrazier.co.uk/:splat 301!
+https://www.robbrazier.uk/* https://robbrazier.uk/:splat 301!
