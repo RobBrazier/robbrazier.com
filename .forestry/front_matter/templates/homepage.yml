@@ -10,15 +10,6 @@ fields:
   config:
     maxSize: 250
   label: Profile Image
-- name: intro
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Intro
 - name: name
   type: text
   config:
