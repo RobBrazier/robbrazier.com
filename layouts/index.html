@@ -5,7 +5,7 @@
       <img src="{{ $profileImage.Permalink }}" alt="Profile Picture">
   </figure>
   <div class="content">
-  {{ .Params.intro | markdownify }}
+  {{ .Content | markdownify }}
   </div>
   {{ partial "social" . }}
 </section>
