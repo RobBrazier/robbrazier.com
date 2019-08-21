@@ -1,24 +1,19 @@
 baseURL = "/"
 languageCode = "en-gb"
-
-[permalinks]
-  post = "/:year/:month/:day/:slug"
-
+[[menu.main]]
+identifier = "projects"
+name = "Projects"
+url = "/projects/"
+weight = 2
+[[menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "/posts/"
+weight = 1
 [params]
-  siteName = "Rob Brazier"
-  author = "Rob Brazier"
-  copyright = "&copy; Rob Brazier. Powered by [Hugo](https://gohugo.io/)"
-
+author = "Rob Brazier"
+copyright = "&copy; Rob Brazier. Powered by [Hugo](https://gohugo.io/)"
 disqusShortName = "robbrazier-com"
-
-## Main Menu
-[[menu.main]]
-  name = "posts"
-  weight = 100
-  identifier = "posts"
-  url = "/posts/"
-[[menu.main]]
-  name = "projects"
-  identifier = "projects"
-  weight = 200
-  url = "/projects/"
+siteName = "Rob Brazier"
+[permalinks]
+post = "/:year/:month/:day/:slug"
