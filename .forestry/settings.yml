@@ -9,6 +9,7 @@ sections:
   label: Projects
   create: all
   match: "**/*"
+  exclude: _index.md
 - type: directory
   path: content/posts
   label: Posts
