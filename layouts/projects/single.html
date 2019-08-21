@@ -5,7 +5,8 @@
   </h1>
   {{ with .Params.image }}
   <figure class="image">
-    <img src="{{ . }}">
+      {{ $image := resources.Get . }}
+      <img src="{{ $image.Permalink }}">
   </figure>
   {{ end }}
   <div class="content">

@@ -1,7 +1,8 @@
 {{ partial "header" . }}
 <section class="section" id="about">
   <figure class="image is-200x200">
-      <img src="{{ .Params.profile_image }}" alt="Responsive image">
+      {{ $profileImage := resources.Get .Params.profile_image }}
+      <img src="{{ $profileImage.Permalink }}" alt="Profile Picture">
   </figure>
   <div class="content">
   {{ .Params.intro | markdownify }}
