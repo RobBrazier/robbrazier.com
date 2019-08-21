@@ -13,9 +13,6 @@ fields:
 - type: text
   name: description
   label: Description
-- type: textarea
-  name: seoMetaTags
-  label: seoMetaTags
 - name: categories
   type: tag_list
   default: []
