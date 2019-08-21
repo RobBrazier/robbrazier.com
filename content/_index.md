@@ -20,5 +20,8 @@ social_profiles:
 - username: robbrazier_
   type: twitter
   url: https://twitter.com/robbrazier_
+profile_: "/media/profile.png"
+intro: ''
+name: ''
 
 ---
