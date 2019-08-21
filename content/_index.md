@@ -20,5 +20,12 @@ social_profiles:
 - username: robbrazier_
   type: twitter
   url: https://twitter.com/robbrazier_
+profile_: "/media/profile.png"
+intro: |-
+  ### I'm **Rob Brazier**, a Software Engineer.
+  ### I love all things computer.
+  ### Have a look at some of my working [projects](/projects).
+  ### I am currently working as a Backend Developer at [Barclaycard](https://home.barclaycard)
+name: ''
 
 ---
