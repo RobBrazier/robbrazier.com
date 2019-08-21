@@ -1,0 +1,46 @@
+---
+label: Homepage
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: seoMetaTags
+  label: seoMetaTags
+- name: social_profiles
+  type: field_group_list
+  fields:
+  - name: type
+    type: select
+    default: []
+    config:
+      required: true
+      options:
+      - twitter
+      - github
+      - linkedin
+      - email
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Type
+  - name: username
+    type: text
+    config:
+      required: false
+    label: Username
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Social Profiles
+pages:
+- content/_index.md
