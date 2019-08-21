@@ -1,0 +1,27 @@
+---
+label: Project
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: text
+  name: link
+  label: Link
+- type: text
+  name: description
+  label: Description
+- type: textarea
+  name: seoMetaTags
+  label: seoMetaTags
+- name: categories
+  type: tag_list
+  default: []
+  label: Categories
+- name: image
+  type: file
+  config:
+    maxSize: 250
+  label: Image

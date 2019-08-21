@@ -4,16 +4,22 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: data
+  label: Homepage
+  match: "**/*"
 - type: directory
   path: content/projects
   label: Projects
   create: all
   match: "**/*"
+  exclude: _index.md
 - type: directory
   path: content/posts
   label: Posts
   create: documents
   match: "*"
+  exclude: _index.md
 upload_dir: assets/media
 public_path: "/media"
 front_matter_path: ''
