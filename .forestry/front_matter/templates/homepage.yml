@@ -42,7 +42,7 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: type
   label: Social Profiles
 pages:
 - content/_index.md
