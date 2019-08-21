@@ -5,25 +5,31 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: content
-  label: Pages
+  path: content/projects
+  label: Projects
   create: all
+  match: "**/*"
+- type: directory
+  path: content/posts
+  label: Posts
+  create: documents
   match: "*"
 upload_dir: assets/media
 public_path: "/media"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
-instant_preview: 
+instant_preview: true
 build:
   preview_env:
   - HUGO_ENV=staging
   - HUGO_VERSION=0.49.2
   preview_output_directory: public
-  preview_docker_image: forestryio/build:latest
-  mount_path: "/opt/buildhome/repo"
-  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
-    -d public
+  install_dependencies_command: npm install
+  preview_docker_image: forestryio/hugo:node10
+  mount_path: "/srv"
+  instant_preview_command: npm run assets && hugo server -D -E -F --port 8080 --bind
+    0.0.0.0 --renderToDisk -d public
   publish_command: hugo -d public
   publish_env:
   - HUGO_ENV=production
