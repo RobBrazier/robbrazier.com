@@ -23,4 +23,5 @@ fields:
     maxSize: 250
   label: Image
 pages:
+- content/projects/mypcspecs.md
 - content/projects/entitydecode.md
