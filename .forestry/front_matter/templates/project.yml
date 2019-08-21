@@ -1,0 +1,22 @@
+---
+label: Project
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: link
+  label: link
+- type: text
+  name: description
+  label: description
+- type: textarea
+  name: seoMetaTags
+  label: seoMetaTags
+- type: list
+  name: categories
+  label: categories
+- type: text
+  name: image
+  label: image
