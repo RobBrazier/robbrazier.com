@@ -26,8 +26,8 @@ build:
   - HUGO_VERSION=0.49.2
   preview_output_directory: public
   install_dependencies_command: npm install
-  preview_docker_image: forestryio/build:latest
-  mount_path: "/opt/buildhome/repo"
+  preview_docker_image: forestryio/hugo:node10
+  mount_path: "/srv"
   instant_preview_command: npm run assets && hugo server -D -E -F --port 8080 --bind
     0.0.0.0 --renderToDisk -d public
   publish_command: hugo -d public
