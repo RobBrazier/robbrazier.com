@@ -4,19 +4,24 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+  config:
+    required: true
 - type: text
   name: link
-  label: link
+  label: Link
 - type: text
   name: description
-  label: description
+  label: Description
 - type: textarea
   name: seoMetaTags
   label: seoMetaTags
-- type: list
-  name: categories
-  label: categories
-- type: text
-  name: image
-  label: image
+- name: categories
+  type: tag_list
+  default: []
+  label: Categories
+- name: image
+  type: file
+  config:
+    maxSize: 250
+  label: Image
