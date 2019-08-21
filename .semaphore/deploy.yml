@@ -1,0 +1,20 @@
+version: v1.0
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: Deploy
+    task:
+      secrets:
+        - bunnycdn-rclone-robbrazier
+      prologue:
+        commands:
+          - curl https://github.com/rclone/rclone/releases/download/v1.48.0/rclone-v1.48.0-linux-amd64.zip
+          - unzip rclone-*.zip
+          - mv rclone /usr/local/bin/rclone
+      jobs:
+        - name: 'Deploy to BunnyCDN'
+          commands:
+            - cache restore hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
+            - "rclone ./public bunnycdn-robbrazier:"
