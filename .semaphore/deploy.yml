@@ -10,9 +10,7 @@ blocks:
         - name: bunnycdn-rclone-robbrazier
       prologue:
         commands:
-          - curl -O -J -L https://github.com/rclone/rclone/releases/download/v1.48.0/rclone-v1.48.0-linux-amd64.zip
-          - unzip rclone-*.zip
-          - mv rclone-*/rclone /usr/local/bin/rclone
+          - sudo apt install rclone -y
       jobs:
         - name: 'Deploy to BunnyCDN'
           commands:
