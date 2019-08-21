@@ -11,11 +11,6 @@ fields:
 - name: social_profiles
   type: field_group_list
   fields:
-  - name: username
-    type: text
-    config:
-      required: false
-    label: Username
   - name: type
     type: select
     default: []
@@ -32,6 +27,11 @@ fields:
         file: 
         path: 
     label: Type
+  - name: username
+    type: text
+    config:
+      required: false
+    label: Username
   - name: url
     type: text
     config:
