@@ -52,6 +52,11 @@ gulp.task('assets:js', () => {
     return bundledStream;
 });
 
+gulp.task('assets:media', () => {
+    return gulp.src('assets/media/*')
+        .pipe(gulp.dest('static/media'));
+});
+
 gulp.task('minify:html', () => {
     return gulp.src('public/**/*.{html,xml}')
         .pipe(prettify({
@@ -66,9 +71,10 @@ gulp.task('minify:html', () => {
 
 gulp.task('minify', gulp.series('minify:html'));
 
-gulp.task('assets', gulp.series('assets:css', 'assets:js'));
+gulp.task('assets', gulp.series('assets:css', 'assets:js', 'assets:media'));
 
 gulp.task('assets:watch', gulp.series('assets', () => {
     gulp.watch('assets/css/*.scss', gulp.series('assets:css'));
     gulp.watch('assets/js/*.js', gulp.series('assets:js'));
+    gulp.watch('assets/media/*', gulp.series('assets:media'));
 }));

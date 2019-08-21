@@ -4,15 +4,12 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "assets": "gulp assets",
-    "assets:watch": "gulp assets:watch",
-    "minify": "gulp minify",
-    "build": "run-s assets dump hugo minify",
-    "dump": "dato dump",
-    "dump:watch": "npm run dump -- --watch",
+    "build": "hugo",
     "hugo": "hugo",
-    "serve": "hugo serve",
-    "start": "run-p assets:watch dump:watch serve"
+    "start": "hugo serve"
+  },
+  "hugo-bin": {
+    "buildTags": "extended"
   },
   "repository": {
     "type": "git",
@@ -21,28 +18,9 @@
   "author": "Rob Brazier",
   "license": "ISC",
   "devDependencies": {
-    "asn1": "^0.2.4",
-    "browserify": "^14.5.0",
-    "bubleify": "^1.1.0",
-    "datocms-client": "^0.7.1",
-    "globby": "^7.1.1",
-    "gulp": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-pretty-data": "^0.2.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "gulp-watch": "^5.0.1",
-    "html-tag": "^2.0.0",
-    "hugo-bin": "^0.45.2",
-    "node-sass-tilde-importer": "^1.0.0",
-    "npm-run-all": "^4.1.2",
-    "sass-module-importer": "^1.4.0",
-    "through2": "^2.0.3",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "hugo-bin": "^0.45.2"
   },
   "dependencies": {
-    "bulma": "^0.6.1",
-    "domready": "^1.0.8"
+    "bulma": "^0.6.1"
   }
 }

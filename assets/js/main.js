@@ -1,13 +1,11 @@
-const domready = require('domready');
-
-domready(() => {
-    const elements = document.getElementsByClassName('obfuscated-email');
-    for (let i in elements) {
+document.addEventListener("DOMContentLoaded", function() {
+    var elements = document.getElementsByClassName('obfuscated-email');
+    for (var i in elements) {
         if (Object.prototype.hasOwnProperty.call(elements, i)) {
-            const element = elements[i];
+            var element = elements[i];
             element.addEventListener('click', (event) => {
-                const email = element.dataset.email;
-                window.location = `mailto:${email}`;
+                var email = element.dataset.email;
+                window.location = "mailto:" + email;
             })
         }
     }

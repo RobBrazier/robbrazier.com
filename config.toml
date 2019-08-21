@@ -5,7 +5,9 @@ languageCode = "en-gb"
   post = "/:year/:month/:day/:slug"
 
 [params]
+  siteName = "Rob Brazier"
   author = "Rob Brazier"
+  copyright = "&copy; Rob Brazier. Powered by [Hugo](https://gohugo.io/)"
 
 disqusShortName = "robbrazier-com"
 

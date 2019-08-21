@@ -1,10 +1,10 @@
 {{ partial "header" . }}
 <section class="section" id="about">
   <figure class="image is-200x200">
-      <img src="{{ .Site.Data.settings.profileImage }}" alt="Responsive image">
+      <img src="{{ .Params.profile_image }}" alt="Responsive image">
   </figure>
   <div class="content">
-  {{ .Site.Data.settings.intro | markdownify }}
+  {{ .Params.intro | markdownify }}
   </div>
   {{ partial "social" . }}
 </section>

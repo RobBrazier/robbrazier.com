@@ -20,7 +20,7 @@ social_profiles:
 - username: robbrazier_
   type: twitter
   url: https://twitter.com/robbrazier_
-profile_: "/media/profile.png"
+profile_image: "/media/profile.png"
 intro: |-
   ### I'm **Rob Brazier**, a Software Engineer.
   ### I love all things computer.

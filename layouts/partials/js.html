@@ -1,1 +1,2 @@
-<script src="{{ .Site.BaseURL }}js/main.js"></script>
+{{ $js := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $js.Permalink }}"></script>

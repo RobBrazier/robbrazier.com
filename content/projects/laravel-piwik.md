@@ -2,7 +2,6 @@
 title: Laravel-Piwik
 link: 'https://laravel-piwik.robbrazier.com'
 description: A Laravel package to interface with the Piwik API
-seoMetaTags: '<title>Laravel-Piwik - Rob Brazier</title><meta property="og:title" content="Laravel-Piwik"><meta name="twitter:title" content="Laravel-Piwik"><meta name="description" content="A Laravel package to interface with the Piwik API"><meta property="og:description" content="A Laravel package to interface with the Piwik API"><meta name="twitter:description" content="A Laravel package to interface with the Piwik API"><meta name="twitter:site" content="@RobBrazier"><meta name="twitter:card" content="summary"><meta property="article:modified_time" content="2017-12-31T16:17:59Z"><meta property="og:locale" content="en_EN"><meta property="og:type" content="article"><meta property="og:site_name" content="Rob Brazier">'
 categories:
   - Open Source
 image: null

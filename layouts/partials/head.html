@@ -6,10 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{ .Site.Params.Author }}" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.BaseURL }}favicon.ico">
-    {{ if  .Params.seoMetaTags }}
-        {{ .Params.seoMetaTags | safeHTML }}
+    <title>{{ .Params.title }} - {{ .Site.Params.SiteName }}</title>
+    <meta property="og:title" content="{{ .Params.title }}">
+    <meta property="twitter:title" content="{{ .Params.title }}">
+    {{ $description := .Summary }}
+    {{ if .Params.description }}
+      {{ $description := .Params.description }}
     {{ end }}
+    <meta name="description" content="{{ $description }}">
+    <meta property="og:description" content="{{ $description }}">
+    <meta property="twitter:description" content="{{ $description }}">
+    <meta name="twitter:site" content="@RobBrazier">
+    <meta name="twitter:card" content="summary">
+    {{ if .Params.date }}
+    <meta property="article:modified_time" content="{{ .Params.Date }}">
+    {{ end }}
+    <meta property="og:locale" content="{{.Site.LanguageCode}}">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="{{.Site.Params.SiteName}}">
+    <!-- {{ if .Params.image }}
+      <meta property="og:image" content="{{.Params.image}}">
+      <meta name="twitter:image" content="{{.Params.image}}">
+    {{ end }} -->
     <!-- {{ .Hugo.Generator }} -->
-    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/main.css" />
+    {{ $style := resources.Get "css/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400bold" />
   </head>
