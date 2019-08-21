@@ -8,7 +8,7 @@ fields:
 - type: textarea
   name: seoMetaTags
   label: seoMetaTags
-- name: profile_
+- name: profile_image
   type: file
   config:
     maxSize: 250
