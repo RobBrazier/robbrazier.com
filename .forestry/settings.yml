@@ -15,6 +15,7 @@ sections:
   label: Posts
   create: documents
   match: "*"
+  exclude: _index.md
 upload_dir: assets/media
 public_path: "/media"
 front_matter_path: ''
