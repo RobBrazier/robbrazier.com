@@ -8,6 +8,9 @@ seoMetaTags: <title>Home - Rob Brazier</title><meta property="og:title" content=
   property="og:locale" content="en_EN"><meta property="og:type" content="article"><meta
   property="og:site_name" content="Rob Brazier">
 social_profiles:
+- username: RobBrazier
+  type: github
+  url: https://github.com/RobBrazier
 - username: robbrazier_
   type: twitter
   url: https://twitter.com/robbrazier_
