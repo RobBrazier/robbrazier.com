@@ -7,7 +7,7 @@ blocks:
   - name: Deploy
     task:
       secrets:
-        - bunnycdn-rclone-robbrazier
+        - name: bunnycdn-rclone-robbrazier
       prologue:
         commands:
           - curl https://github.com/rclone/rclone/releases/download/v1.48.0/rclone-v1.48.0-linux-amd64.zip
