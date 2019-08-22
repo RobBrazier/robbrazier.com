@@ -10,8 +10,8 @@ sections:
 - type: directory
   path: content/projects
   label: Projects
-  create: all
-  match: "**/*"
+  create: documents
+  match: "*"
   exclude: _index.md
   templates:
   - project
