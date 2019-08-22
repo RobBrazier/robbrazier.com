@@ -15,4 +15,4 @@ blocks:
         - name: 'Deploy to BunnyCDN'
           commands:
             - cache restore hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
-            - "sudo -E rclone copy ./public bunny-robbrazier:/robbrazier"
+            - "sudo rclone --config $RCLONE_CONFIG copy ./public bunny-robbrazier:/robbrazier"
