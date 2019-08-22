@@ -7,13 +7,9 @@ blocks:
   - name: Deploy
     task:
       secrets:
-        - name: bunnycdn-rclone-robbrazier
-      #prologue:
-      #  commands:
-      #    - sudo apt install rclone -y
+        - name: bunnycdn-ftp-robbrazier
       jobs:
         - name: 'Deploy to BunnyCDN'
           commands:
             - cache restore hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
-           # - "sudo rclone --config $RCLONE_CONFIG copy ./public bunny-robbrazier:/robbrazier"
             - lftp -c "open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST; set ssl:verify-certificate no; mirror -R ./public /$FTP_USER"
