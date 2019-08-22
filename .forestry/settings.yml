@@ -7,7 +7,6 @@ sections:
 - type: document
   path: content/contact.md
   label: Contact
-  match: "**/*"
 - type: document
   path: content/_index.md
   label: Homepage
