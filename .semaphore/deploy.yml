@@ -6,13 +6,18 @@ agent:
 blocks:
   - name: Deploy
     task:
+      env_vars:
+        - name: DEPLOY_DIR
+          value: ./public
       secrets:
         - name: bunnycdn-ftp-robbrazier
       jobs:
         - name: 'Deploy to BunnyCDN'
           commands:
             - cache restore hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
-            - lftp -c "open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST; set ssl:verify-certificate no; mirror -R ./public /$FTP_USER"
+            - mkdir -p $DEPLOY_DIR/bunny_errors
+            - mv $DEPLOY_DIR/404.html $DEPLOY_DIR/bunny_errors/
+            - lftp -c "open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST; set ssl:verify-certificate no; mirror -R $DEPLOY_DIR /$FTP_USER"
   - name: Purge Cache
     task:
       secrets:
