@@ -17,7 +17,7 @@ blocks:
             - cache restore hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
             - mkdir -p $DEPLOY_DIR/bunnycdn_errors
             - mv $DEPLOY_DIR/404.html $DEPLOY_DIR/bunnycdn_errors/
-            - lftp -c "open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST; set ssl:verify-certificate no; mirror -R $DEPLOY_DIR /$FTP_USER"
+            - lftp -c "open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST; set ssl:verify-certificate no; mirror -e -R $DEPLOY_DIR /$FTP_USER"
   - name: Purge Cache
     task:
       secrets:
