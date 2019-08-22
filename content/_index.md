@@ -1,18 +1,15 @@
 ---
 title: Home
 social_profiles:
-- type: email
-  url: rob@robbrazier.com
-  username: ''
-- username: robbrazier1
-  type: linkedin
-  url: https://www.linkedin.com/in/robbrazier1
-- username: RobBrazier
-  type: github
-  url: https://github.com/RobBrazier
 - username: robbrazier_
   type: twitter
   url: https://twitter.com/robbrazier_
+- username: RobBrazier
+  type: github
+  url: https://github.com/RobBrazier
+- username: robbrazier1
+  type: linkedin
+  url: https://www.linkedin.com/in/robbrazier1
 profile_image: "/media/profile.png"
 
 ---
