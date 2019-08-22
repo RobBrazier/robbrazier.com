@@ -5,9 +5,6 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: document
-  path: content/contact.md
-  label: Contact
-- type: document
   path: content/_index.md
   label: Homepage
 - type: directory
