@@ -56,7 +56,7 @@
 }
  
 .icon-home:before { content: '\e800'; } /* '' */
-.icon-mail:before { content: '\e801'; } /* '' */
+.icon-email:before { content: '\e801'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
 .icon-linkedin:before { content: '\f0e1'; } /* '' */
 .icon-github:before { content: '\f113'; } /* '' */
