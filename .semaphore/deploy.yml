@@ -13,3 +13,11 @@ blocks:
           commands:
             - cache restore hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
             - lftp -c "open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST; set ssl:verify-certificate no; mirror -R ./public /$FTP_USER"
+  - name: Purge Cache
+    task:
+      secrets:
+        - name: bunnycdn-api-key
+        jobs:
+          - name: 'Purge BunnyCDN Pull Zone Cache'
+            commands:
+              - 'curl -X POST -H "AccessKey: $BUNNY_API_KEY" -H "Content-Length: 0" "https://bunnycdn.com/api/pullzone/82250/purgeCache"'
