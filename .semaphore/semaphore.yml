@@ -7,9 +7,6 @@ agent:
 blocks:
   - name: "Build"
     task:
-      prologue:
-        commands:
-          - cache restore
       jobs:
       - name: Hugo Build
         commands:
