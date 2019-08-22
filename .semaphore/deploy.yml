@@ -17,7 +17,7 @@ blocks:
     task:
       secrets:
         - name: bunnycdn-api-key
-        jobs:
-          - name: 'Purge BunnyCDN Pull Zone Cache'
-            commands:
-              - 'curl -X POST -H "AccessKey: $BUNNY_API_KEY" -H "Content-Length: 0" "https://bunnycdn.com/api/pullzone/82250/purgeCache"'
+      jobs:
+        - name: 'Purge BunnyCDN Pull Zone Cache'
+          commands:
+            - 'curl -X POST -H "AccessKey: $BUNNY_API_KEY" -H "Content-Length: 0" "https://bunnycdn.com/api/pullzone/82250/purgeCache"'
