@@ -11,13 +11,7 @@ blocks:
           value: ./public
       secrets:
         - name: bunnycdn-ftp-robbrazier
-        - name: aws-s3
       jobs:
-        - name: 'Deploy to S3'
-          commands:
-            - cache restore hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
-            - sudo apt install s3cmd -y
-            - s3cmd --access_key="$AWS_ACCESS_KEY" --secret_key="$AWS_SECRET_KEY" put -r $DEPLOY_DIR/ s3://robbrazier.com/
         - name: 'Deploy to BunnyCDN'
           commands:
             - cache restore hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
