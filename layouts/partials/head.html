@@ -29,6 +29,6 @@
       <meta name="twitter:image" content="{{.Params.image}}">
     {{ end }} -->
     <!-- {{ .Hugo.Generator }} -->
-    {{ $style := resources.Get "css/main.scss" | resources.ToCSS | resources.Minify | resources.PostCSS | resources.Fingerprint }}
+    {{ $style := resources.Get "css/main.scss" | resources.ToCSS | resources.Minify | resources.PostCSS }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
   </head>
