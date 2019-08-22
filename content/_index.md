@@ -13,7 +13,7 @@ social_profiles:
 - type: email
   username: ''
   url: "/contact"
-profile_image: "/media/profile.png"
+profile_image: "/media/profile.jpg"
 
 ---
 ### I'm **Rob Brazier**, a Software Engineer.

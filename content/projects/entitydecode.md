@@ -4,7 +4,7 @@ link: https://entitydecode.com
 description: A Real-time HTML entity encoder/decoder
 categories:
 - Website
-image: "/media/entitydecode-com.png"
+image: "/media/entitydecode-com.jpg"
 
 ---
 A Real-time HTML entity encoder/decoder (everything is done on the client-side, no server-side calls required).

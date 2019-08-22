@@ -4,7 +4,7 @@ link: https://mypcspecs.io
 description: A signature/image generator for PC details for use on forums etc.
 categories:
 - Website
-image: "/media/mypcspecs-io.png"
+image: "/media/mypcspecs-io.jpg"
 
 ---
 A signature/image generator for PC details for use on forums etc.
