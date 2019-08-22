@@ -11,7 +11,7 @@ title: Contact Me
     <div class="field">
         <label class="label">Email</label>
         <div class="control">
-            <input class="input" required name="email" type="email" placeholder="e.g. alexsmith@gmail.com">
+            <input class="input" required name="email" type="email" placeholder="e.g. johnsmith@email.com">
             <input type="hidden" name="_replyto">
         </div>
     </div>
