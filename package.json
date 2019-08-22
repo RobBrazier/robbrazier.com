@@ -17,7 +17,9 @@
   "author": "Rob Brazier",
   "license": "ISC",
   "devDependencies": {
-    "hugo-bin": "^0.45.2"
+    "cssnano": "^4.1.10",
+    "hugo-bin": "^0.45.2",
+    "postcss-cli": "^6.1.3"
   },
   "dependencies": {
     "bulma": "^0.6.1"

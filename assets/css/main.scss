@@ -16,6 +16,7 @@ $dimensions: 200;
 @import '../../node_modules/bulma/sass/elements/container';
 @import '../../node_modules/bulma/sass/elements/content';
 @import '../../node_modules/bulma/sass/elements/image';
+@import '../../node_modules/bulma/sass/elements/form';
 @import '../../node_modules/bulma/sass/layout/section';
 @import '../../node_modules/bulma/sass/layout/hero';
 @import '../../node_modules/bulma/sass/layout/footer';
@@ -83,7 +84,7 @@ body {
     }
 }
 
-.post-header {
+.post-header, .page-header {
     @extend .has-text-centered;
     .subtitle {
         margin-top: 5px;

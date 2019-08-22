@@ -10,6 +10,11 @@ identifier = "posts"
 name = "Posts"
 url = "/posts/"
 weight = 1
+[[menu.main]]
+identifier = "contact"
+name = "Contact"
+url = "/contact/"
+weight = 3
 [params]
 author = "Rob Brazier"
 copyright = "&copy; Rob Brazier. Powered by [Hugo](https://gohugo.io/)"

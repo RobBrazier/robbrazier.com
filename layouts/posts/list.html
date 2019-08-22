@@ -1,0 +1,19 @@
+{{ partial "header" . }}
+<section class="section">
+  <h3 class="subtitle is-4 has-text-centered">Archive</h3>
+  <div class="content">
+    {{ range .Data.Pages.ByPublishDate }}
+    <div class="columns">
+      <div class="column is-one-third has-text-right">
+        <h5>{{ .Date.Format "January 2, 2006" }}</h5>
+      </div>
+      <div class="column is-two-thirds">
+        <strong>
+          <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+        </strong>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ partial "footer" . }}
