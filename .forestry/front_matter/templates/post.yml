@@ -14,10 +14,19 @@ fields:
   config:
     required: true
   default: now
-- name: aliases
-  type: tag_list
-  default: []
-  label: Aliases
+- name: author
+  type: select
+  default: Rob Brazier
+  config:
+    required: true
+    options:
+    - Rob Brazier
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Author
 - name: description
   type: text
   config:
