@@ -1,8 +1,6 @@
 {{ partial "header" . }}
-<section class="section">
-  <div class="content has-text-centered">
-      <h3>Uh oh! Page not found!</h3>
-      <p>You must have found a broken link, Please try going back to the <a href="/">homepage</a></p>
-  </div>
+<section class="section centre">
+    <h3>Uh oh! Page not found!</h3>
+    <p>You must have found a broken link, Please try going back to the <a href="{{ .Site.BaseURL }}">homepage</a></p>
 </section>
 {{ partial "footer" . }}

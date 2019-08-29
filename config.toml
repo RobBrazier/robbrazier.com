@@ -20,5 +20,3 @@ author = "Rob Brazier"
 copyright = "&copy; Rob Brazier. Powered by [Hugo](https://gohugo.io/)"
 disqusShortName = "robbrazier-com"
 siteName = "Rob Brazier"
-[permalinks]
-post = "/:year/:month/:day/:slug"
