@@ -14,6 +14,10 @@ fields:
   config:
     required: true
   default: now
+- name: aliases
+  type: tag_list
+  default: []
+  label: Aliases
 - name: description
   type: text
   config:
