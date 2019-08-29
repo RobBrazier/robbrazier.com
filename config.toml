@@ -1,5 +1,6 @@
 baseURL = "/"
 languageCode = "en-gb"
+title = "robbrazier.com"
 [[menu.main]]
 identifier = "projects"
 name = "Projects"
