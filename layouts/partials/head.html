@@ -25,6 +25,6 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="{{.Site.Params.SiteName}}">
     {{ $options := (dict "includePaths" (slice "node_modules/milligram-scss/src")) }}
-    {{ $style := resources.Get "css/main.scss" | resources.ToCSS $options | resources.PostCSS | resources.Minify }}
+    {{ $style := resources.Get "css/main.scss" | resources.ToCSS $options | resources.Minify }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
   </head>
