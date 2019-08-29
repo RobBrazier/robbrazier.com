@@ -1,15 +1,15 @@
 {{ partial "header" . }}
 <section class="section">
-  <h3 class="subtitle is-4 has-text-centered">Projects</h3>
+  <h2 class="subtitle">Projects</h2>
   <div class="content">
     {{ range .Data.Pages }}
-    <div class="columns">
-        <div class="column is-one-third has-text-right">
+    <div class="row">
+        <div class="column">
           {{ range .Params.categories }}
-            <h5>{{ . }}</h5>
+            <h5 class="has-text-right">{{ . }}</h5>
           {{ end }}
         </div>
-        <div class="column is-two-thirds">
+        <div class="column column-66">
           <strong>
             <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
           </strong>

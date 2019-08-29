@@ -24,11 +24,7 @@
     <meta property="og:locale" content="{{.Site.LanguageCode}}">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="{{.Site.Params.SiteName}}">
-    <!-- {{ if .Params.image }}
-      <meta property="og:image" content="{{.Params.image}}">
-      <meta name="twitter:image" content="{{.Params.image}}">
-    {{ end }} -->
-    <!-- {{ .Hugo.Generator }} -->
-    {{ $style := resources.Get "css/main.scss" | resources.ToCSS | resources.Minify | resources.PostCSS }}
+    {{ $options := (dict "includePaths" (slice "node_modules/milligram-scss/src")) }}
+    {{ $style := resources.Get "css/main.scss" | resources.ToCSS $options | resources.PostCSS | resources.Minify }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
   </head>

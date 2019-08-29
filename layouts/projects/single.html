@@ -1,8 +1,8 @@
 {{ partial "header" . }}
 <section class="section">
-  <h1 class="title has-text-centered">
+  <h2 class="title">
     <a href="{{ .Params.link }}">{{ .Title }}</a>
-  </h1>
+  </h2>
   {{ with .Params.image }}
   <figure class="image">
       {{ $image := resources.Get . }}

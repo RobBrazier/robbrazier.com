@@ -1,101 +1,140 @@
-@import '../../node_modules/bulma/sass/utilities/_all';
-$link: #2277a8;
-$family-primary: Arial, sans-serif;
+@import './fontello.css';
+@import 'Color';
+$color-primary: #2277a8;
+@import 'Base';
+// @import 'Blockquote';
+@import 'Button';
+@import 'Code';
+@import 'Divider';
+@import 'Form';
+@import 'Grid';
+@import 'Link';
+@import 'List';
+@import 'Spacing';
+@import 'Table';
+@import 'Typography';
+@import 'Image';
+@import 'Utility';
+@import './navigation';
 
-$light-grey: #6b6b6b;
-
-$navbar-item-hover-background-color: $white;
-$navbar-item-color: $light-grey;
-$navbar-item-hover-color: $grey-darker;
-$footer-background-color: $white;
-
-$dimensions: 200;
-
-@import '../../node_modules/bulma/sass/base/_all';
-@import '../../node_modules/bulma/sass/grid/_all';
-@import '../../node_modules/bulma/sass/elements/container';
-@import '../../node_modules/bulma/sass/elements/content';
-@import '../../node_modules/bulma/sass/elements/image';
-@import '../../node_modules/bulma/sass/elements/form';
-@import '../../node_modules/bulma/sass/layout/section';
-@import '../../node_modules/bulma/sass/layout/hero';
-@import '../../node_modules/bulma/sass/layout/footer';
-@import '../../node_modules/bulma/sass/components/navbar';
-@import '../../node_modules/bulma/sass/elements/title';
-@import 'fontello';
-
-body {
-    border-top: 6px solid #2277a8;
+.centre {
+    text-align: center;
+    margin: inherit auto;
 }
 
-#wrap {
-    @extend .container;
-    @extend .is-mobile;
+.title, .subtitle {
+    @extend .centre;
 }
 
-.navbar-brand a:hover {
-    @extend .navbar-item;
+.has-text-right {
+    text-align: right;
 }
 
-.navbar {
-    font-size: 14px;
+.has-text-left {
+    text-align: left;
 }
 
-.navbar-menu {
-    box-shadow: none;
-    .navbar-end {
-        .navbar-item {
-            @extend .has-text-centered;
+.social-links {
+    display: block;
+    margin-top: 4rem;
+    li {
+        display: inline-block;
+        a {
+            font-size: 2rem;
+            color: inherit;
+            padding: 10px 10px 4px 10px;
         }
     }
 }
 
-.container {
-    max-width: 800px;
+figure > img.profile {
+    border-radius: 10rem;
 }
+// $link: #2277a8;
+// $family-primary: Arial, sans-serif;
 
-#about {
-    @extend .has-text-centered;
-    .content {
-        margin-top: 20px;
-        h3 {
-            margin-top: 20px;
-        margin-bottom: 10px;
-            line-height: 1.1;
-        }
-    }
-    .social-links {
-        display: block;
-        margin-top: 40px;
-        li {
-            display: inline-block;
-            a {
-                font-size: 20px;
-                color: $black;
-                padding: 10px 10px 4px 10px;
-            }
-        }
-    }
-    figure {
-        margin: 0 auto;
-        img {
-            border-radius: 100px;
-        }
-    }
-}
+// $light-grey: #6b6b6b;
 
-.post-header, .page-header {
-    @extend .has-text-centered;
-    .subtitle {
-        margin-top: 5px;
-        margin-bottom: 1.5rem;
-    }
-}
+// $navbar-item-hover-background-color: $white;
+// $navbar-item-color: $light-grey;
+// $navbar-item-hover-color: $grey-darker;
+// $footer-background-color: $white;
 
-.footer {
-    padding: 3rem 1.5rem;
-    p {
-        font-size: 14px;
-        color: $grey;
-    }
-}
+// $dimensions: 200;
+
+// @import '../../node_modules/bulma/sass/base/_all';
+// @import '../../node_modules/bulma/sass/grid/_all';
+// @import '../../node_modules/bulma/sass/elements/container';
+// @import '../../node_modules/bulma/sass/elements/content';
+// @import '../../node_modules/bulma/sass/elements/image';
+// @import '../../node_modules/bulma/sass/elements/form';
+// @import '../../node_modules/bulma/sass/layout/section';
+// @import '../../node_modules/bulma/sass/layout/hero';
+// @import '../../node_modules/bulma/sass/layout/footer';
+// @import '../../node_modules/bulma/sass/components/navbar';
+// @import '../../node_modules/bulma/sass/elements/title';
+// @import 'fontello';
+
+// body {
+//     border-top: 6px solid #2277a8;
+// }
+
+// #wrap {
+//     @extend .container;
+//     @extend .is-mobile;
+// }
+
+// .navbar-brand a:hover {
+//     @extend .navbar-item;
+// }
+
+// .navbar {
+//     font-size: 14px;
+// }
+
+// .navbar-menu {
+//     box-shadow: none;
+//     .navbar-end {
+//         .navbar-item {
+//             @extend .has-text-centered;
+//         }
+//     }
+// }
+
+// .container {
+//     max-width: 800px;
+// }
+
+// #about {
+//     @extend .has-text-centered;
+//     .content {
+//         margin-top: 20px;
+//         h3 {
+//             margin-top: 20px;
+//         margin-bottom: 10px;
+//             line-height: 1.1;
+//         }
+//     }
+//     figure {
+//         margin: 0 auto;
+//         img {
+//             border-radius: 100px;
+//         }
+//     }
+// }
+
+// .post-header, .page-header {
+//     @extend .has-text-centered;
+//     .subtitle {
+//         margin-top: 5px;
+//         margin-bottom: 1.5rem;
+//     }
+// }
+
+// .footer {
+//     padding: 3rem 1.5rem;
+//     p {
+//         font-size: 14px;
+//         color: $grey;
+//     }
+// }

@@ -1,10 +1,10 @@
 {{ partial "header" . }}
-<section class="section" id="about">
-  <figure class="image is-200x200">
+<section class="section">
+  <figure class="centre">
       {{ $profileImage := resources.Get .Params.profile_image }}
-      <img src="{{ $profileImage.Permalink }}" alt="Profile Picture">
+      <img class="profile" src="{{ $profileImage.Permalink }}" alt="Profile Picture">
   </figure>
-  <div class="content">
+  <div class="centre">
   {{ .Content | markdownify }}
   </div>
   {{ partial "social" . }}
