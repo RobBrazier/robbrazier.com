@@ -21,6 +21,9 @@
     {{ if .Params.date }}
     <meta property="article:modified_time" content="{{ .Params.Date }}">
     {{ end }}
+    {{ range .AlternativeOutputFormats -}} 
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
     <meta property="og:locale" content="{{.Site.LanguageCode}}">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="{{.Site.Params.SiteName}}">
