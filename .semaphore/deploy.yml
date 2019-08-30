@@ -11,13 +11,20 @@ blocks:
           value: ./public
       secrets:
         - name: bunnycdn-ftp-robbrazier
+        - name: now.sh-deploy-token
       jobs:
         - name: 'Deploy to BunnyCDN'
           commands:
             - cache restore hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
+            - rm $DEPLOY_DIR/now.json
             - mkdir -p $DEPLOY_DIR/bunnycdn_errors
             - mv $DEPLOY_DIR/404.html $DEPLOY_DIR/bunnycdn_errors/
             - lftp -c "open -u $FTP_USER,$FTP_PASSWORD $FTP_HOST; set ssl:verify-certificate no; mirror -R $DEPLOY_DIR /$FTP_USER"
+        - name: 'Deploy to now.sh'
+          commands:
+            - cache restore hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
+            - npm i -g now
+            - now --prod $DEPLOY_DIR
   - name: Purge Cache
     task:
       secrets:
