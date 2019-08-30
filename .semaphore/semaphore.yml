@@ -19,7 +19,7 @@ blocks:
           - cache store hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH public
 
 promotions:
-  - name: Deploy to BunnyCDN
+  - name: Deploy
     pipeline_file: deploy.yml
     auto_promote_on:
       - result: passed
