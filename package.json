@@ -2,9 +2,8 @@
   "name": "robbrazier.com",
   "private": true,
   "scripts": {
-    "hugo": "./.hugo/hugo",
-    "build": "npm run hugo -- --minify",
-    "start": "npm run hugo -- server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk -d public"
+    "build": "./.hugo/hugo --minify",
+    "start": "./.hugo/hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk -d public"
   },
   "hugo-bin": {
     "buildTags": "extended"
