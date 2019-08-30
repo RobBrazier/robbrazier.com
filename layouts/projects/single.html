@@ -5,7 +5,8 @@
   </h2>
   {{ with .Params.image }}
   <figure class="image">
-      {{ $image := resources.Get . }}
+      {{ $resource := resources.Get . }}
+      {{ $image := $resource.Resize "1000x q75" }} 
       <img src="{{ $image.Permalink }}">
   </figure>
   {{ end }}
