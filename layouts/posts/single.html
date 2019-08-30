@@ -9,7 +9,7 @@
         &nbsp;&nbsp;
         {{ range .Params.tags }}
         {{ $url := (delimit (slice "/tags" . "") "/")}}
-        <span class="label"><a href={{ $url | absURL }}>{{ . }}</a></span>
+        <span class="label"><a href={{ $url | absURL }}>#{{ . }}</a></span>
         {{ end }}
     </h6>
   </div>
