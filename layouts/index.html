@@ -2,7 +2,8 @@
 <section class="section">
   <figure class="centre">
       {{ $resource := resources.Get .Params.profile_image }}
-      {{ $profileImage := $resource.Resize "190x q75" }} 
+      {{ $cropped := $resource.Fill "190x190 center" }}
+      {{ $profileImage := $cropped.Resize "190x q75" }} 
       <img class="profile" src="{{ $profileImage.Permalink }}" alt="Profile Picture">
   </figure>
   <div class="centre">
