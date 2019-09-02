@@ -1,7 +1,6 @@
 {
   "version": 2,
   "name": "robbrazier.com",
-  "alias": ["robbrazier-com", "robbrazier.com"],
   "routes": [
     { "src": "/portfolio/(?<id>.*)", "status": 301, "headers": { "Location": "/projects/$id" } },
     { "src": "/(.*)", "dest": "/$1" },
