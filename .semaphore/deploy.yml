@@ -16,12 +16,4 @@ blocks:
           commands:
             - cache restore hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
             - npm i -g now
-            - now --prod $DEPLOY_DIR
-#  - name: Purge Cache
-#    task:
-#      secrets:
-#        - name: bunnycdn-api-key
-#      jobs:
-#        - name: 'Purge BunnyCDN Pull Zone Cache'
-#          commands:
-#            - 'curl -X POST -H "AccessKey: $BUNNY_API_KEY" -H "Content-Length: 0" "https://bunnycdn.com/api/pullzone/83344/purgeCache"'
+            - now --prod $DEPLOY_DIR'
