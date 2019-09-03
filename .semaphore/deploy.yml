@@ -16,4 +16,4 @@ blocks:
           commands:
             - cache restore hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
             - npm i -g now
-            - now --prod $DEPLOY_DIR'
+            - now --prod $DEPLOY_DIR
