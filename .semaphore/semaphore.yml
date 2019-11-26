@@ -11,12 +11,12 @@ blocks:
       - name: Hugo Build
         commands:
           - checkout
-          - cache delete hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH public
+          - cache delete robbrazier-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH public
           - cache restore
           - npm install
           - cache store
           - npm run build
-          - cache store hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH public
+          - cache store robbrazier-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH public
 
 promotions:
   - name: Deploy
