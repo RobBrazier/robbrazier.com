@@ -13,5 +13,5 @@ blocks:
         - name: 'Deploy to Netlify'
           commands:
             - npm install -g netlify-cli
-            - cache restore entitydecode-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
+            - cache restore hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
             - netlify deploy --dir=public --prod
