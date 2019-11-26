@@ -6,14 +6,12 @@ agent:
 blocks:
   - name: Deploy
     task:
-      env_vars:
-        - name: DEPLOY_DIR
-          value: ./public
       secrets:
-        - name: now.sh-deploy-token
+        - name: netlify-authentication
+        - name: netlify-robbrazier
       jobs:
-        - name: 'Deploy to now.sh'
+        - name: 'Deploy to Netlify'
           commands:
-            - cache restore hugo-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
-            - npm i -g now
-            - now --prod $DEPLOY_DIR
+            - npm install -g netlify-cli
+            - cache restore entitydecode-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
+            - netlify deploy --dir=public --prod
