@@ -11,14 +11,8 @@ fields:
 - type: text
   name: link
   label: Link
-- name: description
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
+- type: text
+  name: description
   label: Description
 - name: categories
   type: tag_list
