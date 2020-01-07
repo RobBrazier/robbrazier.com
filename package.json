@@ -2,7 +2,7 @@
   "name": "robbrazier.com",
   "private": true,
   "scripts": {
-    "build": "./.hugo/hugo --minify",
+    "build": "./.hugo/hugo",
     "start": "./.hugo/hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk -d public"
   },
   "hugo-bin": {
