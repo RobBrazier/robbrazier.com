@@ -2,19 +2,20 @@
   "name": "robbrazier.com",
   "private": true,
   "scripts": {
-    "build": "./.hugo/hugo",
-    "start": "./.hugo/hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk -d public"
-  },
-  "hugo-bin": {
-    "buildTags": "extended"
+    "build": "hugo",
+    "start": "hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk -d public",
+    "serve": "static -p 8000 public"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RobBrazier/robbrazier.com.git"
   },
   "author": "Rob Brazier",
-  "devDependencies": {},
   "dependencies": {
-    "milligram-scss": "^1.3.0"
+    "milligram-scss": "^1.3.0",
+    "node-static": "^0.7.11"
+  },
+  "devDependencies": {
+    "hugo-extended": "^0.65.3"
   }
 }
