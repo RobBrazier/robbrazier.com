@@ -20,3 +20,8 @@ author:
   name: "Rob Brazier"
 params:
   author: "Rob Brazier"
+  
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
