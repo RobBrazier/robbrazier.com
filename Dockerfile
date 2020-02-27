@@ -9,6 +9,6 @@ ADD . .
 RUN npm install && \
     npm run build
 
-EXPOSE 8000
+EXPOSE 80
 
 CMD [ "npm", "run", "serve" ]

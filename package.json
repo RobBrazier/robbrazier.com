@@ -4,7 +4,7 @@
   "scripts": {
     "build": "hugo",
     "start": "hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk -d public",
-    "serve": "static -p 8000 public"
+    "serve": "static -p 80 public"
   },
   "repository": {
     "type": "git",
