@@ -27,7 +27,7 @@ blocks:
         - name: 'Publish to GitHub Packages'
           commands:
             - checkout
-            - echo $GH_TOKEN | docker login -u RobBrazier --password-stdin
+            - echo $GH_TOKEN | docker login -u RobBrazier --password-stdin docker.pkg.github.com
             - docker build -t web .
             - docker tag web docker.pkg.github.com/robbrazier/$SEMAPHORE_GIT_DIR/web:latest
             - docker push docker.pkg.github.com/robbrazier/$SEMAPHORE_GIT_DIR/web:latest
