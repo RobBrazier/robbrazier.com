@@ -28,6 +28,9 @@ blocks:
           commands:
             - checkout
             - echo $GH_TOKEN | docker login -u RobBrazier --password-stdin docker.pkg.github.com
+            - export GIT_SHA="$(git rev-parse --short HEAD)"
             - docker build -t web .
+            - docker tag web docker.pkg.github.com/robbrazier/$SEMAPHORE_GIT_DIR/web:$GIT_SHA
             - docker tag web docker.pkg.github.com/robbrazier/$SEMAPHORE_GIT_DIR/web:latest
+            - docker push docker.pkg.github.com/robbrazier/$SEMAPHORE_GIT_DIR/web:$GIT_SHA
             - docker push docker.pkg.github.com/robbrazier/$SEMAPHORE_GIT_DIR/web:latest
