@@ -22,7 +22,7 @@ blocks:
   - name: Publish
     task:
       secrets:
-        - name: gh-token
+        - name: gh-token-docker
       jobs:
         - name: 'Publish to GitHub Packages'
           commands:
