@@ -24,11 +24,11 @@ blocks:
       secrets:
         - name: dockerhub-secrets
       jobs:
-        - name: 'Publish to GitHub Packages'
+        - name: 'Publish to Docker Hub'
           commands:
             - checkout
-            - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin index.docker.io
+            - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
             - export GIT_SHA="$(git rev-parse --short HEAD)"
-            - docker build -t docker.io/$DOCKER_USERNAME/$SEMAPHORE_GIT_DIR:$GIT_SHA -t docker.io/$DOCKER_USERNAME/$SEMAPHORE_GIT_DIR:latest .
-            - docker push docker.io/$DOCKER_USERNAME/$SEMAPHORE_GIT_DIR:$GIT_SHA
-            - docker push docker.io/$DOCKER_USERNAME/$SEMAPHORE_GIT_DIR:latest
+            - docker build -t $DOCKER_USERNAME/$SEMAPHORE_GIT_DIR:$GIT_SHA -t $DOCKER_USERNAME/$SEMAPHORE_GIT_DIR:latest .
+            - docker push $DOCKER_USERNAME/$SEMAPHORE_GIT_DIR:$GIT_SHA
+            - docker push $DOCKER_USERNAME/$SEMAPHORE_GIT_DIR:latest
