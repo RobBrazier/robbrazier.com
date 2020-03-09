@@ -33,7 +33,7 @@ blocks:
             - checkout
             - aws ecr get-login --no-include-email | bash 
             - export GIT_SHA="${SEMAPHORE_GIT_SHA:0:7}"
-            - export ECR_REGISTRY="$DOCKER_REGISTRY/$SEMAPHORE_GIT_DIR"
-            - docker build -t $ECR_REGISTRY:$GIT_SHA -t $ECR_REGISTRY:latest .
-            - docker push $ECR_REGISTRY:$GIT_SHA
-            - docker push $ECR_REGISTRY:latest
+            - export ECR_REPOSITORY="$DOCKER_REGISTRY/$SEMAPHORE_GIT_DIR"
+            - docker build -t $ECR_REPOSITORY:$GIT_SHA -t $ECR_REPOSITORY:latest .
+            - docker push $ECR_REPOSITORY:$GIT_SHA
+            - docker push $ECR_REPOSITORY:latest
