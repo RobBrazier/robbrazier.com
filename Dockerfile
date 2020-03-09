@@ -1,14 +1,14 @@
-FROM node:10-stretch-slim
+FROM node:10-stretch-slim as builder
 
 ARG APP_DIR="/usr/src/app"
 
 WORKDIR $APP_DIR
 
-ADD . .
+COPY . .
 
 RUN npm install && \
     npm run build
 
-EXPOSE 80
+FROM nginx:alpine
 
-CMD [ "npm", "run", "serve" ]
+COPY --from=builder /usr/src/app/public /usr/share/nginx/html
