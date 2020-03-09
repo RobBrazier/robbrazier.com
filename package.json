@@ -16,6 +16,6 @@
     "node-static": "^0.7.11"
   },
   "devDependencies": {
-    "hugo-extended": "^0.66.0"
+    "hugo-extended": "^0.67.0"
   }
 }
