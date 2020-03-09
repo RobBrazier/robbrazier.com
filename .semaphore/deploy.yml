@@ -31,8 +31,9 @@ blocks:
         - name: 'Publish to AWS ECR'
           commands:
             - checkout
-            - aws ecr get-login-password | docker login -u $DOCKER_USERNAME --password-stdin $DOCKER_REGISTRY/$SEMAPHORE_GIT_DIR
-            - export GIT_SHA="$(git rev-parse --short HEAD)"
-            - docker build -t $DOCKER_REGISTRY/$SEMAPHORE_GIT_DIR:$GIT_SHA -t $DOCKER_REGISTRY/$SEMAPHORE_GIT_DIR:latest .
-            - docker push $DOCKER_REGISTRY/$SEMAPHORE_GIT_DIR:$GIT_SHA
-            - docker push $DOCKER_REGISTRY/$SEMAPHORE_GIT_DIR:latest
+            - aws ecr get-login --no-include-email | bash 
+            - export GIT_SHA="${SEMAPHORE_GIT_SHA:0:7}"
+            - export ECR_REGISTRY="$DOCKER_REGISTRY/$SEMAPHORE_GIT_DIR"
+            - docker build -t $ECR_REGISTRY:$GIT_SHA -t $ECR_REGISTRY:latest .
+            - docker push $ECR_REGISTRY:$GIT_SHA
+            - docker push $ECR_REGISTRY:latest
