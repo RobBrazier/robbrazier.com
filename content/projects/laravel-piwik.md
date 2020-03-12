@@ -5,7 +5,8 @@ description: A Laravel package to interface with the Piwik API
 categories:
 - Open Source
 image: 
-
+aliases: 
+- "/portfolio/laravel-piwik"
 ---
 A Laravel package to interface with the Piwik API.
 
