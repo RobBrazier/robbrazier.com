@@ -8,11 +8,11 @@ const markdownIt = require("markdown-it");
 
 
 module.exports = function(eleventyConfig) {
+    eleventyConfig.addPlugin(pluginSass);
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addPlugin(pluginSyntaxHighlight);
     eleventyConfig.addPlugin(pluginNavigation);
-    eleventyConfig.addPlugin(pluginSass);
-    eleventyConfig.addPlugin(pluginCacheBuster({}));
+    // eleventyConfig.addPlugin(pluginCacheBuster({}));
 
     eleventyConfig.setDataDeepMerge(true);
 
