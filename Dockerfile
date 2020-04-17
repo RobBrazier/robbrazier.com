@@ -12,4 +12,5 @@ RUN npm install && \
 FROM nginx:alpine
 
 COPY .nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /usr/src/app/public /var/www
+COPY --from=builder /usr/src/app/_site /var/www
+
