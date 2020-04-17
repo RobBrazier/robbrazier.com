@@ -3,6 +3,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginSass = require('eleventy-plugin-sass');
+const pluginCacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
 const markdownIt = require("markdown-it");
 
 
@@ -11,6 +12,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(pluginSyntaxHighlight);
     eleventyConfig.addPlugin(pluginNavigation);
     eleventyConfig.addPlugin(pluginSass);
+    eleventyConfig.addPlugin(pluginCacheBuster({}));
 
     eleventyConfig.setDataDeepMerge(true);
 
@@ -34,7 +36,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
     eleventyConfig.addPassthroughCopy("media");
-    // eleventyConfig.addPassthroughCopy("css");
+    eleventyConfig.addPassthroughCopy("favicon.ico");
 
     return {
         templateFormats: [
