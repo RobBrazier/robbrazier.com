@@ -1,8 +1,3 @@
 .idea/
-public/
+_site/
 node_modules/
-static/css/*
-static/js/*
-resources/
-# Local Netlify folder
-.netlify

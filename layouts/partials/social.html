@@ -1,9 +1,0 @@
-<div class="social centre">
-  <ul class="social-links">
-    {{ range .Params.social_profiles }}
-      {{ if .url }}
-        <li><a href="{{ .url }}">{{ partial "icon.html" ( dict "name" .type ) }}</a></li>
-      {{ end }}
-    {{ end }}
-  </ul>
-</div>

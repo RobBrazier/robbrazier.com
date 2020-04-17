@@ -2,47 +2,40 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: ''
-webhook_url: 
+webhook_url:
 sections:
 - type: document
-  path: content/_index.md
+  path: index.md
   label: Homepage
 - type: directory
-  path: content/projects
+  path: projects
   label: Projects
   create: documents
-  match: "*"
-  exclude: _index.md
+  match: "*.md"
   templates:
   - project
 - type: directory
-  path: content/posts
+  path: posts
   label: Posts
   create: documents
-  match: "*"
-  exclude: _index.md
+  match: "*.md"
   templates:
   - post
-upload_dir: assets/media
+upload_dir: media
 public_path: "/media"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 instant_preview: true
 build:
-  preview_env:
-  - HUGO_ENV=staging
-  - HUGO_VERSION=0.57.2
-  preview_output_directory: public
-  install_dependencies_command: npm install
-  preview_docker_image: forestryio/hugo:node10
+  preview_env: []
+  preview_output_directory: _site
+  install_dependencies_command: npm ci
+  preview_docker_image: forestryio/node:12
   mount_path: "/srv"
-  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
-    -d public
-  publish_command: hugo -d public
-  publish_env:
-  - HUGO_ENV=production
-  - HUGO_VERSION=0.57.2
-  output_directory: public
-  preview_command: hugo -E -F -D -b $DEPLOY_URL -d public
+  instant_preview_command: npm run-script start
+  publish_command: npm run-script build
+  publish_env: []
+  output_directory: _site
+  preview_command: npm run-script start
 version: 0.49.2

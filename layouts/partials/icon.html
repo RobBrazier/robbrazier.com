@@ -1,9 +1,0 @@
-{{ if eq .name "email" }}
-  {{ readFile "/layouts/icons/email.svg" | safeHTML }}
-{{ else if eq .name "github" }}
-  {{ readFile "/layouts/icons/github.svg" | safeHTML }}
-{{ else if eq .name "linkedin" }}
-  {{ readFile "/layouts/icons/linkedin.svg" | safeHTML }}
-{{ else if eq .name "twitter" }}
-  {{ readFile "/layouts/icons/twitter.svg" | safeHTML }}
-{{ end }}

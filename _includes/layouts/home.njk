@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+<figure class="centre">
+{#    {{ $resource := resources.Get .Params.profile_image }}#}
+{#    {{ $cropped := $resource.Fill "190x190 center" }}#}
+{#    {{ $profileImage := $cropped.Resize "190x q75" }}#}
+    <img class="profile" src="{{ profile_image | url }}" alt="Profile Picture">
+</figure>
+
+<div class="centre">
+    {{ content | safe }}
+</div>
+
+{% include "social.njk" %}

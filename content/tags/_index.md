@@ -1,4 +1,0 @@
----
-title: Tags
-home: true
----
