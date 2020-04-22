@@ -2,7 +2,7 @@
   "title": "Rob Brazier",
   "url": "https://robbrazier.com",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "",
     "filename": "feed/posts.xml",
     "path": "/feed/posts.xml",
     "id": "https://robbrazier.com/"
