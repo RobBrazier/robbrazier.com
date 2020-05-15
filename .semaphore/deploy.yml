@@ -19,6 +19,16 @@ blocks:
             - cache restore robbrazier-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH
             - s3cmd --no-mime-magic --acl-public --delete-removed --delete-after sync _site/ s3://$BUCKET_NAME | tee changed.txt
             - cat changed.txt | awk -F'-> ' '{ print $2 }' | awk -F"'" '{ print $2 }' | sed -e 's!s3://!https://!g' | xargs -I{} curl -X POST -H Content-Length:0 -H Content-Type:application/json -H Accept:application/json -H "AccessKey:$BUNNY_API_KEY" "https://bunnycdn.com/api/purge?url={}"
+  - name: Deploy to Caprover
+    task:
+      secrets:
+        - name: caprover
+      jobs:
+        - name: 'Deploy to Caprover'
+          commands:
+            - checkout --use-cache
+            - npm i -g caprover
+            - caprover deploy -h $CAPROVER_URL -p $CAPROVER_PASSWORD -b $SEMAPHORE_GIT_BRANCH -a robbrazier
   - name: Publish
     task:
       secrets:
