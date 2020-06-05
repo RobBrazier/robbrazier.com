@@ -21,4 +21,4 @@ profile_image: "/media/profile-190.jpg"
 ### I'm **Rob Brazier**, a Software Engineer.
 ### I love all things computer.
 ### Have a look at some of my working [projects](/projects/).
-### I am currently working as a Backend Developer at [Barclaycard](https://home.barclaycard)
+### I am currently working as a Developer at [Barclays](https://home.barclays)
