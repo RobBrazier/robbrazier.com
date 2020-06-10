@@ -1,0 +1,7 @@
+{
+    "trailingSlash": false,
+    "redirects": [
+        { "source": "/portfolio", "destination": "/projects" },
+        { "source": "/portfolio/(.*)", "destination": "/projects/$1" }
+    ]
+}
