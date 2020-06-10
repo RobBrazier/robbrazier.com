@@ -8,7 +8,7 @@ blocks:
   - name: "Build"
     task:
       jobs:
-      - name: Hugo Build
+      - name: 11ty Build
         commands:
           - checkout
           - cache delete robbrazier-$SEMAPHORE_GIT_SHA-$SEMAPHORE_GIT_BRANCH _site
