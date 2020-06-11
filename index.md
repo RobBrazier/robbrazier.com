@@ -1,7 +1,6 @@
 ---
 layout: home.njk
 title: Home
- 
 social_profiles:
 - username: robbrazier_
   type: twitter
@@ -9,17 +8,13 @@ social_profiles:
 - username: RobBrazier
   type: github
   url: https://github.com/RobBrazier
-- username: robbrazier1
-  type: linkedin
-  url: https://www.linkedin.com/in/robbrazier1
 - type: email
   username: ''
   url: "/contact"
 profile_image: "/media/profile-190.jpg"
+
 ---
- 
 ### I'm **Rob Brazier**, a Software Engineer.
 ### I love all things computer.
 ### Have a look at some of my working [projects](/projects/).
 ### I am currently working as a Developer at [Barclays](https://home.barclays)
- 
