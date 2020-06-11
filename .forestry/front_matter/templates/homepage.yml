@@ -10,7 +10,7 @@ fields:
 - name: profile_image
   type: file
   config:
-    maxSize: 250
+    maxSize: 64
   label: Profile Image
 - name: social_profiles
   type: field_group_list
