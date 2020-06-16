@@ -1,0 +1,40 @@
+baseURL = "https://robbrazier.com/"
+title = "Rob Brazier"
+theme = "hello-friend-ng"
+languageCode = "en"
+enableEmoji = true
+
+[author]
+  name = "Rob Brazier"
+
+[params]
+homeSubtitle = "Software Engineer"
+defaultTheme = "light"
+[params.portrait]
+path = "/images/avatar.jpg"
+alt = "Rob Brazier"
+[params.logo]
+logoText = "Rob Brazier"
+logoCursorDisabled = true
+[[params.social]]
+name = "twitter"
+url  = "https://twitter.com/robbrazier_"
+
+[[params.social]]
+name = "email"
+url  = "https://mailhide.io/e/BaaNO"
+
+[[params.social]]
+name = "github"
+url  = "https://github.com/robbrazier"
+
+[[menu.main]]
+name = "Posts"
+url = "/posts"
+
+[[menu.main]]
+name = "Projects"
+url = "/projects"
+
+[blackfriday]
+  hrefTargetBlank = true
