@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://robbrazier.com"
 title = "Rob Brazier"
 theme = "hello-friend-ng"
 languageCode = "en"
