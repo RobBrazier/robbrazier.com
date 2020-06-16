@@ -29,6 +29,10 @@ name = "github"
 url  = "https://github.com/robbrazier"
 
 [[menu.main]]
+name = "About"
+url = "/about"
+
+[[menu.main]]
 name = "Posts"
 url = "/posts"
 
