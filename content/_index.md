@@ -1,5 +1,4 @@
 ---
-aliases: [
-    "/contact"
-]
+aliases:
+  - "/contact"
 ---
