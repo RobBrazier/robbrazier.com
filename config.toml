@@ -8,37 +8,37 @@ enableEmoji = true
   name = "Rob Brazier"
 
 [params]
-homeSubtitle = "Software Engineer"
-defaultTheme = "light"
-[params.portrait]
-path = "/images/avatar.jpg"
-alt = "Rob Brazier"
-[params.logo]
-logoText = "Rob Brazier"
-logoCursorDisabled = true
-[[params.social]]
-name = "twitter"
-url  = "https://twitter.com/robbrazier_"
+  homeSubtitle = "Software Engineer"
+  defaultTheme = "light"
+  [params.portrait]
+    path = "/images/avatar.jpg"
+    alt = "Rob Brazier"
+  [params.logo]
+    logoText = "Rob Brazier"
+    logoCursorDisabled = true
 
-[[params.social]]
-name = "email"
-url  = "https://mailhide.io/e/BaaNO"
+  [[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/robbrazier_"
+  [[params.social]]
+    name = "email"
+    url  = "https://mailhide.io/e/BaaNO"
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/robbrazier"
 
-[[params.social]]
-name = "github"
-url  = "https://github.com/robbrazier"
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about"
 
-[[menu.main]]
-name = "About"
-url = "/about"
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts"
 
-[[menu.main]]
-name = "Posts"
-url = "/posts"
-
-[[menu.main]]
-name = "Projects"
-url = "/projects"
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects"
 
 [blackfriday]
   hrefTargetBlank = true
