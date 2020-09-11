@@ -17,9 +17,9 @@ enableEmoji = true
     logoText = "Rob Brazier"
     logoCursorDisabled = true
 
-  [[params.social]]
-    name = "twitter"
-    url  = "https://twitter.com/robbrazier_"
+#  [[params.social]]
+#    name = "twitter"
+#    url  = "https://twitter.com/robbrazier_"
   [[params.social]]
     name = "email"
     url  = "https://mailhide.io/e/BaaNO"
