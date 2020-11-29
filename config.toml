@@ -17,9 +17,9 @@ enableEmoji = true
     logoText = "Rob Brazier"
     logoCursorDisabled = true
 
-#  [[params.social]]
-#    name = "twitter"
-#    url  = "https://twitter.com/robbrazier_"
+ [[params.social]]
+   name = "twitter"
+   url  = "https://twitter.com/robbrazier_"
   [[params.social]]
     name = "email"
     url  = "https://mailhide.io/e/BaaNO"
@@ -42,3 +42,17 @@ enableEmoji = true
 
 [blackfriday]
   hrefTargetBlank = true
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
