@@ -22,7 +22,7 @@ enableEmoji = true
    url  = "https://twitter.com/robbrazier_"
   [[params.social]]
     name = "email"
-    url  = "https://mailhide.io/e/BaaNO"
+    url  = "mailto:me@robbrazier.com"
   [[params.social]]
     name = "github"
     url  = "https://github.com/robbrazier"
