@@ -9,16 +9,20 @@ blocks:
     task:
       secrets:
         - name: robbrazier-bunnycdn-ftp
+      jobs:
+      - name: Deploy to BunnyCDN
+        commands:
+          - checkout --cached
+          - cache restore "${SEMAPHORE_PROJECT_ID}-${SEMAPHORE_WORKFLOW_ID}"
+          - bash .semaphore/deploy.sh
+  - name: "Clear Cache"
+    task:
+      secrets:
         - name: bunnycdn-api-key
       env_vars:
         - name: PULLZONE_ID
           value: "218621"
       jobs:
-      - name: Deploy to BunnyCDN
-        commands:
-          - checkout --cached
-          - cache restore "${SEMAPHORE_PROJECT_ID}-${SEMAPHORE_JOB_ID}"
-          - bash .semaphore/deploy.sh
       - name: Clear Cache
         commands:
           - curl -X POST -H "AccessKey:$BUNNY_API_KEY" "https://bunnycdn.com/api/pullzone/$PULLZONE_ID/purgeCache"

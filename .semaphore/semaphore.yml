@@ -12,7 +12,7 @@ blocks:
         commands:
           - checkout
           - ./hugow -D --gc
-          - cache store "${SEMAPHORE_PROJECT_ID}-${SEMAPHORE_JOB_ID}" public/
+          - cache store "${SEMAPHORE_PROJECT_ID}-${SEMAPHORE_WORKFLOW_ID}" public/
 
 promotions:
   - name: Deploy
