@@ -12,7 +12,7 @@ blocks:
       jobs:
       - name: Deploy to BunnyCDN
         commands:
-          - checkout --cached
+          - checkout --use-cache
           - cache restore "${SEMAPHORE_PROJECT_ID}-${SEMAPHORE_WORKFLOW_ID}"
           - bash .semaphore/deploy.sh
   - name: "Clear Cache"

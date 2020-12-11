@@ -11,6 +11,7 @@ blocks:
       - name: Hugo Build
         commands:
           - checkout
+          - git pull --recurse-submodules
           - ./hugow -D --gc
           - cache store "${SEMAPHORE_PROJECT_ID}-${SEMAPHORE_WORKFLOW_ID}" public/
 
