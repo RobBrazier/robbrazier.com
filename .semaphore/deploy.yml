@@ -25,4 +25,4 @@ blocks:
       jobs:
       - name: Clear Cache
         commands:
-          - curl -X POST -H 'Content-Length:0' -H "AccessKey:$BUNNY_API_KEY" "https://bunnycdn.com/api/pullzone/$PULLZONE_ID/purgeCache"
+          - curl -X POST -H 'Content-Length:0' -H "AccessKey:$BUNNY_API_KEY" "https://bunnycdn.com/api/pullzone/$PULLZONE_ID/purgeCache" --verbose
