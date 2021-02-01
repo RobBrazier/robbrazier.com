@@ -9,7 +9,6 @@ enableEmoji = true
 
 [params]
   homeSubtitle = "Software Engineer"
-  defaultTheme = "light"
   [params.portrait]
     path = "/images/avatar.jpg"
     alt = "Rob Brazier"
