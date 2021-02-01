@@ -21,7 +21,7 @@ blocks:
         - name: bunnycdn-api-key
       env_vars:
         - name: PULLZONE_ID
-          value: "218621"
+          value: "240304"
       jobs:
       - name: Clear Cache
         commands:
