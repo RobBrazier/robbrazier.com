@@ -3,7 +3,7 @@ title: EntityDecode
 description: A Real-time HTML entity encoder/decoder
 categories:
 - Website
-cover: "images/entitydecode-com.jpg"
+cover: "images/entitydecode-com.png"
 aliases: 
 - "/portfolio/entitydecode"
 ---
