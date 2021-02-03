@@ -3,6 +3,9 @@ ftp_url="ftp://$BUNNYCDN_USERNAME:$BUNNYCDN_PASSWORD@storage.bunnycdn.com"
 
 cd public
 
+mkdir -p bunnycdn_errors
+mv 404.html bunnycdn_errors/
+
 lftp "$ftp_url" -e "mirror --dry-run --reverse --delete; bye" > ../to-delete.txt
 
 to_delete=$(grep rm ../to-delete.txt | awk -F"$BUNNYCDN_USERNAME/" '{ print $2 }')
