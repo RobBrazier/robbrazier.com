@@ -1,0 +1,60 @@
+baseURL: 'https://robbrazier.com'
+title: Rob Brazier
+theme: hello-friend-ng
+languageCode: en
+enableEmoji: true
+
+author:
+  name: Rob Brazier
+
+params:
+  homeSubtitle: Software Engineer
+  portrait:
+    path: /images/avatar.jpg
+    alt: Rob Brazier
+  logo:
+    logoText: Rob Brazier
+    logoCursorDisabled: true
+  social:
+    - name: twitter
+      url: 'https://twitter.com/robbrazier_'
+    - name: email
+      url: 'https://mailhide.io/e/BaaNO'
+    - name: github
+      url: 'https://github.com/robbrazier'
+
+menu:
+  main:
+    - name: About
+      url: /about
+    - name: Posts
+      url: /posts
+    - name: Projects
+      url: /projects
+
+blackfriday:
+  hrefTargetBlank: true
+
+markup:
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ''
+    lineAnchors: ''
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: monokai
+    tabWidth: 4
+
+server:
+  headers:
+  - for: /**
+    values:
+      x-content-type-options: nosniff
+      x-frame-options: deny
+      x-xss-protection: 1; mode=block
+      content-security-policy: "default-src 'self'; font-src 'self'; img-src 'self' minnow.robbrazier.com; script-src 'self' minnow.robbrazier.com; style-src 'self' 'unsafe-hashes' 'sha256-tIs8OfjWm8MHgPJrHv7mM4wvA/FDFcra3Pd5icRMX+k=' 'sha256-cZnCpO7APKQ7dxe410u9jBCj8ez8jdV1cII7DIqzDSw=' 'sha256-hzIcYfZBAS6TMkM8iJP16DaezAk3zmFwlKbLZeeZcCE='; report-uri https://brzr.report-uri.com/r/d/csp/enforce"
+      referrer-policy: strict-origin-when-cross-origin
