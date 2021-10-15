@@ -56,7 +56,7 @@
         fonts.googleapis.com
     ;
     frame-src 'none'
-        ww.google.com
+        www.google.com
     ;    
     report-uri https://brzr.report-uri.com/r/d/csp/enforce
     ;
