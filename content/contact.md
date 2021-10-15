@@ -38,6 +38,7 @@ title: Contact Me
 }
 #fs-frm [type="text"], #fs-frm [type="email"] { width: 100%; }
 #fs-frm [type="submit"] {
+    padding-top: 0.75rem;
     width: auto;
     cursor: pointer;
     margin-bottom: 0;
