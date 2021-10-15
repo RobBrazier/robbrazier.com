@@ -15,9 +15,9 @@
   # Default build command.
   command = "./hugow -D --gc"
 
-[[plugins]]
+#[[plugins]]
   # Installs the Lighthouse Build Plugin for all deploy contexts
-  package = "@netlify/plugin-lighthouse"
+#  package = "@netlify/plugin-lighthouse"
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
