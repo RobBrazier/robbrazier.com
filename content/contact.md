@@ -46,7 +46,7 @@ title: Contact Me
 #fs-frm [type="submit"]:focus { outline: none; }
 </style>
 
-<form id="fs-frm" accept-charset="utf-8" action="https://formspree.io/f/xpzkzdpz" method="post">
+<form id="fs-frm" accept-charset="utf-8" action="https://formspree.io/f/xpzkzdpz" netlify method="post">
   <fieldset id="fs-frm-inputs">
     <label for="full-name">Full Name</label>
     <input type="text" name="name" id="full-name" placeholder="First and Last" required>
