@@ -32,6 +32,7 @@
     default-src 'none'; 
     font-src 'self'
         d33wubrfki0l68.cloudfront.net
+        fonts.gstatic.com
     ;
     img-src 'self' 
         minnow.robbrazier.com
@@ -40,6 +41,8 @@
     script-src 'self' 
         minnow.robbrazier.com
         d33wubrfki0l68.cloudfront.net
+        'sha256-5ZWCOT9O22K1OHGQNVrlvVQwpFX5x0b4DsCuU9kJrE8='
+        'sha256-ac1XKlQjJ0y9V+D6VODPMoiVQ+aPB+VG6mR9qn/aicc='
     ; 
     style-src 'self' 
         'unsafe-hashes' 
@@ -48,6 +51,7 @@
         'sha256-MXeKCjz/MdTlYErDR5Prz2WAWDEyc9dO9L6Mn0XbnUI='
         'sha256-5yn9Sfag4b+fWchSpMVF/87o99y26mH5nirG2mn3M74='
         d33wubrfki0l68.cloudfront.net
+        fonts.googleapis.com
     ; 
     report-uri https://brzr.report-uri.com/r/d/csp/enforce
     ;
