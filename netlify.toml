@@ -30,7 +30,9 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Content-Security-Policy = """
     default-src 'none'; 
-    font-src 'self'; 
+    font-src 'self'
+        d33wubrfki0l68.cloudfront.net
+    ;
     img-src 'self' 
         minnow.robbrazier.com
         d33wubrfki0l68.cloudfront.net
@@ -48,4 +50,5 @@
         d33wubrfki0l68.cloudfront.net
     ; 
     report-uri https://brzr.report-uri.com/r/d/csp/enforce
+    ;
     """
