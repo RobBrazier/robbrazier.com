@@ -39,10 +39,9 @@
         d33wubrfki0l68.cloudfront.net
     ; 
     script-src 'self' 
+        'unsafe-inline'
         minnow.robbrazier.com
         d33wubrfki0l68.cloudfront.net
-        'sha256-5ZWCOT9O22K1OHGQNVrlvVQwpFX5x0b4DsCuU9kJrE8='
-        'sha256-ac1XKlQjJ0y9V+D6VODPMoiVQ+aPB+VG6mR9qn/aicc='
     ; 
     style-src 'self' 
         'unsafe-hashes' 
@@ -50,6 +49,7 @@
         'sha256-cZnCpO7APKQ7dxe410u9jBCj8ez8jdV1cII7DIqzDSw='
         'sha256-MXeKCjz/MdTlYErDR5Prz2WAWDEyc9dO9L6Mn0XbnUI='
         'sha256-5yn9Sfag4b+fWchSpMVF/87o99y26mH5nirG2mn3M74='
+        'sha256-EM9mcTxjou4pftiz42FC+u18Tg4/WYwQ8tW0IAVZ8nk='
         d33wubrfki0l68.cloudfront.net
         fonts.googleapis.com
     ; 
