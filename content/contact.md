@@ -46,7 +46,7 @@ title: Contact Me
 #fs-frm [type="submit"]:focus { outline: none; }
 </style>
 
-<form id="fs-frm" accept-charset="utf-8" name="contact" data-netlify="true" method="post">
+<form id="fs-frm" accept-charset="utf-8" name="contact" data-netlify="true" data-netlify-recaptcha="true" method="post">
   <fieldset id="fs-frm-inputs">
     <label for="name">Full Name</label>
     <input type="text" name="name" id="name" placeholder="First and Last" required>
@@ -54,6 +54,7 @@ title: Contact Me
     <input type="email" name="email" id="email" placeholder="email@domain.tld" required>
     <label for="message">Message</label>
     <textarea rows="5" name="message" id="message" required></textarea>
+    <div data-netlify-recaptcha="true"></div>
     <input type="hidden" name="subject" id="subject" value="Contact Form Submission">
   </fieldset>
   <input type="submit" value="Submit">
