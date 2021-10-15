@@ -29,13 +29,15 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Content-Security-Policy = """
-    default-src 'self'; 
+    default-src 'none'; 
     font-src 'self'; 
     img-src 'self' 
         minnow.robbrazier.com
+        d33wubrfki0l68.cloudfront.net
     ; 
     script-src 'self' 
         minnow.robbrazier.com
+        d33wubrfki0l68.cloudfront.net
     ; 
     style-src 'self' 
         'unsafe-hashes' 
@@ -43,6 +45,7 @@
         'sha256-cZnCpO7APKQ7dxe410u9jBCj8ez8jdV1cII7DIqzDSw='
         'sha256-MXeKCjz/MdTlYErDR5Prz2WAWDEyc9dO9L6Mn0XbnUI='
         'sha256-5yn9Sfag4b+fWchSpMVF/87o99y26mH5nirG2mn3M74='
+        d33wubrfki0l68.cloudfront.net
     ; 
     report-uri https://brzr.report-uri.com/r/d/csp/enforce
     """
