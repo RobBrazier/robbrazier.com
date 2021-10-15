@@ -42,6 +42,7 @@
         'unsafe-inline'
         minnow.robbrazier.com
         d33wubrfki0l68.cloudfront.net
+        www.google.com
     ; 
     style-src 'self' 
         'unsafe-hashes' 
