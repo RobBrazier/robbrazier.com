@@ -54,7 +54,10 @@
         'sha256-EM9mcTxjou4pftiz42FC+u18Tg4/WYwQ8tW0IAVZ8nk='
         d33wubrfki0l68.cloudfront.net
         fonts.googleapis.com
-    ; 
+    ;
+    frame-src 'none'
+        ww.google.com
+    ;    
     report-uri https://brzr.report-uri.com/r/d/csp/enforce
     ;
     """
