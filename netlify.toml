@@ -53,6 +53,7 @@
         'sha256-5yn9Sfag4b+fWchSpMVF/87o99y26mH5nirG2mn3M74='
         'sha256-EM9mcTxjou4pftiz42FC+u18Tg4/WYwQ8tW0IAVZ8nk='
         d33wubrfki0l68.cloudfront.net
+        cdnjs.cloudflare.com
         fonts.googleapis.com
     ;
     frame-src www.google.com;    

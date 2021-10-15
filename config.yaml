@@ -21,6 +21,11 @@ params:
       url: 'https://twitter.com/robbrazier_'
     - name: github
       url: 'https://github.com/robbrazier'
+  enableThemeToggle: true
+  footer:
+    trademark: true
+    rss: true
+    author: true
 
 menu:
   main:
@@ -57,5 +62,5 @@ server:
       x-content-type-options: nosniff
       x-frame-options: deny
       x-xss-protection: 1; mode=block
-      content-security-policy: "default-src 'self'; font-src 'self'; img-src 'self' minnow.robbrazier.com; script-src 'self' minnow.robbrazier.com; style-src 'self' 'unsafe-hashes' 'sha256-tIs8OfjWm8MHgPJrHv7mM4wvA/FDFcra3Pd5icRMX+k=' 'sha256-cZnCpO7APKQ7dxe410u9jBCj8ez8jdV1cII7DIqzDSw=' 'sha256-MXeKCjz/MdTlYErDR5Prz2WAWDEyc9dO9L6Mn0XbnUI=' 'sha256-5yn9Sfag4b+fWchSpMVF/87o99y26mH5nirG2mn3M74='; report-uri https://brzr.report-uri.com/r/d/csp/enforce"
+      content-security-policy: "default-src 'self'; font-src 'self'; img-src 'self' minnow.robbrazier.com; script-src 'self' minnow.robbrazier.com; style-src 'self' 'unsafe-hashes' 'sha256-tIs8OfjWm8MHgPJrHv7mM4wvA/FDFcra3Pd5icRMX+k=' 'sha256-cZnCpO7APKQ7dxe410u9jBCj8ez8jdV1cII7DIqzDSw=' 'sha256-MXeKCjz/MdTlYErDR5Prz2WAWDEyc9dO9L6Mn0XbnUI=' 'sha256-5yn9Sfag4b+fWchSpMVF/87o99y26mH5nirG2mn3M74=' cdnjs.cloudflare.com; report-uri https://brzr.report-uri.com/r/d/csp/enforce"
       referrer-policy: strict-origin-when-cross-origin
