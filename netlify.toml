@@ -43,6 +43,7 @@
         minnow.robbrazier.com
         d33wubrfki0l68.cloudfront.net
         www.google.com
+        www.gstatic.com
     ; 
     style-src 'self' 
         'unsafe-hashes' 
