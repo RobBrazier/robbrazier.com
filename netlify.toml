@@ -44,7 +44,9 @@
         d33wubrfki0l68.cloudfront.net
         www.google.com
         www.gstatic.com
-    ; 
+    ;
+    manifest-src 'self'
+    ;
     style-src 'self' 
         'unsafe-hashes' 
         'sha256-tIs8OfjWm8MHgPJrHv7mM4wvA/FDFcra3Pd5icRMX+k='
