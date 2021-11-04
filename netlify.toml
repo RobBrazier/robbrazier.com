@@ -35,7 +35,7 @@
         fonts.gstatic.com
     ;
     img-src 'self' 
-        minnow.robbrazier.com
+        now-nine.robbrazier.com
         d33wubrfki0l68.cloudfront.net
     ; 
     script-src 'self' 
