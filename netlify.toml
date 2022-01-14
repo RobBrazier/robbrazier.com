@@ -13,7 +13,7 @@
   publish = "public/"
 
   # Default build command.
-  command = "./hugow -D --gc"
+  command = "./hugow -D --gc --minify"
 
 #[[plugins]]
   # Installs the Lighthouse Build Plugin for all deploy contexts
