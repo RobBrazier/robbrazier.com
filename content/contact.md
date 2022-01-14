@@ -44,9 +44,10 @@ title: Contact Me
     color: #222222;
 }
 #fs-frm [type="submit"]:focus { outline: none; }
+.hidden { display: none; }
 </style>
 
-<form id="fs-frm" accept-charset="utf-8" name="contact" data-netlify="true" data-netlify-recaptcha="true" method="post">
+<form id="fs-frm" accept-charset="utf-8" name="contact" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field" method="post">
   <fieldset id="fs-frm-inputs">
     <label for="name">Full Name</label>
     <input type="text" name="name" id="name" placeholder="First and Last" required>
@@ -55,6 +56,7 @@ title: Contact Me
     <label for="message">Message</label>
     <textarea rows="5" name="message" id="message" required></textarea>
     <div data-netlify-recaptcha="true"></div>
+    <p class="hidden"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
     <input type="hidden" name="subject" id="subject" value="Contact Form Submission">
   </fieldset>
   <br/>
