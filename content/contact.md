@@ -44,7 +44,6 @@ title: Contact Me
     color: #222222;
 }
 #fs-frm [type="submit"]:focus { outline: none; }
-.hidden { display: none; }
 </style>
 
 <form id="fs-frm" accept-charset="utf-8" name="contact" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field" method="post">
