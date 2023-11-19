@@ -1,42 +1,60 @@
 baseURL: 'https://www.robbrazier.com'
 title: Rob Brazier
-theme: hello-friend-ng
+theme: maverick
 languageCode: en
-enableEmoji: true
 
 author:
   name: Rob Brazier
 
 params:
-  homeSubtitle: Software Engineer
-  portrait:
-    path: /images/avatar.jpg
-    alt: Rob Brazier
-    maxWidth: 50%
-  logo:
-    logoText: Rob Brazier
-    logoCursorDisabled: true
+  author: Rob Brazier
+  info: Software Engineer
+  avatarUrl: /images/avatar.jpg
+  favicon_16: /img/favicon-16x16.png
+  favicon_32: /img/favicon-32x32.png
+  touchicon: /img/apple-touch-icon.png
+  colorScheme: auto
   social:
-    - name: twitter
-      url: 'https://twitter.com/robbrazier_'
+#    - name: twitter
+#      url: 'https://twitter.com/robbrazier_'
+#      icon: fa fa-twitter fa-2x
     - name: github
       url: 'https://github.com/robbrazier'
-  enableThemeToggle: true
-  footer:
-    trademark: true
-    rss: true
-    author: true
+      icon: fa fa-github fa-2x
+    - name: codeberg
+      url: 'https://codeberg.org/RobBrazier'
+      icon: fa fa-gitea fa-2x
+  csp:
+    childsrc:
+      - "'self'"
+    fontsrc:
+      - "'self'"
+    formaction: 
+      - "'self'"
+    framesrc:
+      - "'self'"
+    imgsrc:
+      - "'self'"
+      - "d33wubrfki0l68.cloudfront.net"
+    objectsrc:
+      - "'none'"
+    stylesrc:
+      - "'self'"
+      - "'unsafe-inline'"
+    scriptsrc:
+      - "'self'"
+      - "'unsafe-inline'"
+      - "plausible.io"
+    prefetchsrc:
+      - "'self'"
+    connectsrc:
+      - "'self'"
+      - "plausible.io"
 
 menu:
   main:
-    - name: About
-      url: /about
-    - name: Contact
-      url: /contact
     - name: Posts
       url: /posts
-    - name: Projects
-      url: /projects
 
 markup:
   highlight:
@@ -62,5 +80,4 @@ server:
       x-content-type-options: nosniff
       x-frame-options: deny
       x-xss-protection: 1; mode=block
-      content-security-policy: "default-src 'self'; font-src 'self'; img-src 'self' minnow.robbrazier.com; script-src 'self' minnow.robbrazier.com; style-src 'self' 'unsafe-hashes' 'sha256-tIs8OfjWm8MHgPJrHv7mM4wvA/FDFcra3Pd5icRMX+k=' 'sha256-cZnCpO7APKQ7dxe410u9jBCj8ez8jdV1cII7DIqzDSw=' 'sha256-MXeKCjz/MdTlYErDR5Prz2WAWDEyc9dO9L6Mn0XbnUI=' 'sha256-5yn9Sfag4b+fWchSpMVF/87o99y26mH5nirG2mn3M74=' cdnjs.cloudflare.com; report-uri https://brzr.report-uri.com/r/d/csp/enforce"
       referrer-policy: strict-origin-when-cross-origin
