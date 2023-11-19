@@ -1,0 +1,2 @@
+{{ $img := ((resources.Get (.Get "src")).Resize "120x").Process "webp" }}
+<img class="avatar" src="{{ $img.RelPermalink }}" alt="{{ .Get "alt" }}" />

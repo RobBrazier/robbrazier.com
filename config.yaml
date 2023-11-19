@@ -1,4 +1,4 @@
-baseURL: 'https://www.robbrazier.com'
+baseURL: "https://www.robbrazier.com"
 title: Rob Brazier
 theme: maverick
 languageCode: en
@@ -15,21 +15,21 @@ params:
   touchicon: /img/apple-touch-icon.png
   colorScheme: auto
   social:
-#    - name: twitter
-#      url: 'https://twitter.com/robbrazier_'
-#      icon: fa fa-twitter fa-2x
+    #    - name: twitter
+    #      url: 'https://twitter.com/robbrazier_'
+    #      icon: fa fa-twitter fa-2x
     - name: github
-      url: 'https://github.com/robbrazier'
+      url: "https://github.com/robbrazier"
       icon: fa fa-github fa-2x
     - name: codeberg
-      url: 'https://codeberg.org/RobBrazier'
+      url: "https://codeberg.org/RobBrazier"
       icon: fa fa-gitea fa-2x
   csp:
     childsrc:
       - "'self'"
     fontsrc:
       - "'self'"
-    formaction: 
+    formaction:
       - "'self'"
     framesrc:
       - "'self'"
@@ -61,8 +61,8 @@ markup:
     anchorLineNos: false
     codeFences: true
     guessSyntax: false
-    hl_Lines: ''
-    lineAnchors: ''
+    hl_Lines: ""
+    lineAnchors: ""
     lineNoStart: 1
     lineNos: false
     lineNumbersInTable: true
@@ -73,11 +73,16 @@ markup:
     renderer:
       unsafe: true
 
+module:
+  mounts:
+    - source: assets
+      target: static
+
 server:
   headers:
-  - for: /**
-    values:
-      x-content-type-options: nosniff
-      x-frame-options: deny
-      x-xss-protection: 1; mode=block
-      referrer-policy: strict-origin-when-cross-origin
+    - for: /**
+      values:
+        x-content-type-options: nosniff
+        x-frame-options: deny
+        x-xss-protection: 1; mode=block
+        referrer-policy: strict-origin-when-cross-origin
