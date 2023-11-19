@@ -8,12 +8,11 @@
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/schema.html" . }}
     <link rel="canonical" href="{{ .Permalink }}">
-    <link rel="icon" href="{{ .Site.BaseURL }}/assets/favicon.ico">
     <link rel="alternate" type="application/atom+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}/atom.xml" />
     <link rel="alternate" type="application/json" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}/feed.json" />
-    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="{{ .Site.BaseURI }}/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ .Site.BaseURI }}/img/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURI }}/img/apple-touch-icon.png">
     {{ $styles := resources.Get "scss/styles.scss" | toCSS (dict "outputStyle" "compressed") | minify }}
     {{ $styles_extra := resources.Get "scss/_extra.scss" | toCSS (dict "outputStyle" "compressed") | minify }}
     <style>{{ $styles.Content | safeCSS }} {{ $styles_extra.Content | safeCSS }}</style>
