@@ -16,7 +16,7 @@
     {{ $styles := resources.Get "scss/styles.scss" | toCSS (dict "outputStyle" "compressed") | minify }}
     {{ $styles_extra := resources.Get "scss/_extra.scss" | toCSS (dict "outputStyle" "compressed") | minify }}
     <style>{{ $styles.Content | safeCSS }} {{ $styles_extra.Content | safeCSS }}</style>
-    <script async src="https://api.r0b.dev/latest.js" data-website-id="b709256b-5bd3-4002-9f1d-b40a1396983d"></script>
+    <script async src="https://stats.r0b.dev/latest.js" data-website-id="b709256b-5bd3-4002-9f1d-b40a1396983d"></script>
 
     {{ if .IsHome -}}
   <script type="application/ld+json">
