@@ -1,3 +1,5 @@
+providers = ['staticfile']
+
 [phases.setup]
 nixPkgs = ['hugo']
 
