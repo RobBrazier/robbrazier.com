@@ -2,7 +2,7 @@ providers = ['staticfile']
 
 [phases.setup]
 nixPkgs = ['hugo']
-nixPkgsArchive = '00e924257aa59f48194fc539acee15f18134d2bb'
+nixpkgsArchive = '00e924257aa59f48194fc539acee15f18134d2bb'
 
 [phases.build]
 cmds = ['hugo --gc --minify']
