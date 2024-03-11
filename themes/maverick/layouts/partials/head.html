@@ -4,7 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Liste - {{ .Site.BaseURL }}">
     <title>{{ if eq .IsHome true }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-    <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta name="description"
+        content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/schema.html" . }}
     <link rel="canonical" href="{{ .Permalink }}">
@@ -13,13 +14,14 @@
     <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}/img/favicon-16x16.png" sizes="16x16">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}/img/apple-touch-icon.png">
-    {{ $styles := resources.Get "scss/styles.scss" | toCSS (dict "outputStyle" "compressed") | minify }}
-    {{ $styles_extra := resources.Get "scss/_extra.scss" | toCSS (dict "outputStyle" "compressed") | minify }}
-    <style>{{ $styles.Content | safeCSS }} {{ $styles_extra.Content | safeCSS }}</style>
+    {{ $styles := resources.Get "scss/styles.scss" | toCSS (dict "outputStyle" "compressed") }}
+    {{ $styles_extra := resources.Get "scss/_extra.scss" | toCSS (dict "outputStyle" "compressed") }}
+    {{ $styles_css := slice $styles $styles_extra | resources.Concat "styles.css" | minify }}
+    <link rel="stylesheet" href="{{ $styles_css.Permalink }}">
     <script defer data-domain="robbrazier.com" data-api="/api/event" src="/js/script.js"></script>
 
     {{ if .IsHome -}}
-  <script type="application/ld+json">
+    <script type="application/ld+json">
   {
       "@context": "http://schema.org",
       "@type": "WebSite",
@@ -30,10 +32,10 @@
       "license": "{{ .Site.Params.Copyright }}"
   }
   </script>
-  {{ else if .IsPage }}
-  {{ $author :=  or (.Params.author) (.Site.Author.name) }}
-  {{ $org_name :=  .Site.Title }}
-  <script type="application/ld+json">
+    {{ else if .IsPage }}
+    {{ $author := or (.Params.author) (.Site.Author.name) }}
+    {{ $org_name := .Site.Title }}
+    <script type="application/ld+json">
   {
       "@context": "http://schema.org",
       "@type": "BlogPosting",
@@ -83,6 +85,6 @@
       "keywords" : [ {{ range $index, $tag := .Params.tags }}{{ if $index }}, {{ end }}"{{ $tag }}" {{ end }}]
   }
   </script>
-  {{ end }}
-  
-  </head>
+    {{ end }}
+
+</head>

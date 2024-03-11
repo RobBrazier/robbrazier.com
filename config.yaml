@@ -36,7 +36,6 @@ params:
     imgsrc:
       - "'self'"
       - "d33wubrfki0l68.cloudfront.net"
-      - "cdn.usefathom.com"
     objectsrc:
       - "'none'"
     stylesrc:
@@ -46,13 +45,11 @@ params:
       - "'self'"
       - "'unsafe-inline'"
       - "plausible.io"
-      - "cdn.usefathom.com"
     prefetchsrc:
       - "'self'"
     connectsrc:
       - "'self'"
       - "plausible.io"
-      - "cdn.usefathom.com"
 
 menu:
   main:
@@ -89,3 +86,6 @@ server:
         x-frame-options: deny
         x-xss-protection: 1; mode=block
         referrer-policy: strict-origin-when-cross-origin
+
+minify:
+  minifyOutput: true
