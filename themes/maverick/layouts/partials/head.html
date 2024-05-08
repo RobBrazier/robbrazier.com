@@ -18,7 +18,7 @@
     {{ $styles_extra := resources.Get "scss/_extra.scss" | toCSS (dict "outputStyle" "compressed") }}
     {{ $styles_css := slice $styles $styles_extra | resources.Concat "styles.css" | minify }}
     <link rel="stylesheet" href="{{ $styles_css.Permalink }}">
-    <script defer data-domain="robbrazier.com" data-api="/api/event" src="/js/script.js"></script>
+    <script defer src="https://st.r0b.dev/script.js" data-website-id="4e41f2aa-64e7-4ba2-a766-d0000527cd70" data-domains="robbrazier.com"></script>
 
     {{ if .IsHome -}}
     <script type="application/ld+json">
