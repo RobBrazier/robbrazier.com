@@ -1,0 +1,40 @@
+app = 'robbrazier-com'
+primary_region = 'lhr'
+
+[build.args]
+BASE_URL = "https://robbrazier-com.fly.dev"
+
+[deploy]
+strategy = "bluegreen"
+
+[http_service]
+internal_port = 8043
+force_https = true
+auto_stop_machines = true
+auto_start_machines = true
+min_machines_running = 1
+processes = ['app']
+[http_service.concurrency]
+hard_limit = 500
+soft_limit = 450
+[[http_service.checks]]
+grace_period = '1s'
+interval = '10s'
+method = 'GET'
+timeout = '1s'
+path = '/health'
+
+[[vm]]
+size = 'shared-cpu-1x'
+
+[[statics]]
+guest_path = '/srv/http/css'
+url_prefix = '/css'
+
+[[statics]]
+guest_path = '/srv/http/images'
+url_prefix = '/images'
+
+[[statics]]
+guest_path = '/srv/http/img'
+url_prefix = '/img'

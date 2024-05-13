@@ -16,9 +16,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}/img/apple-touch-icon.png">
     {{ $styles := resources.Get "scss/styles.scss" | toCSS (dict "outputStyle" "compressed") }}
     {{ $styles_extra := resources.Get "scss/_extra.scss" | toCSS (dict "outputStyle" "compressed") }}
-    {{ $styles_css := slice $styles $styles_extra | resources.Concat "styles.css" | minify }}
+    {{ $styles_css := slice $styles $styles_extra | resources.Concat "css/styles.css" | minify }}
     <link rel="stylesheet" href="{{ $styles_css.Permalink }}">
-    <script defer src="https://st.r0b.dev/script.js" data-website-id="4e41f2aa-64e7-4ba2-a766-d0000527cd70" data-domains="robbrazier.com"></script>
+    <script defer src="https://st.r0b.dev/script.js" data-website-id="4e41f2aa-64e7-4ba2-a766-d0000527cd70"
+        data-domains="robbrazier.com"></script>
 
     {{ if .IsHome -}}
     <script type="application/ld+json">
