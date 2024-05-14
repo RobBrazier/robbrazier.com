@@ -12,10 +12,10 @@ COPY . .
 
 RUN hugo -b $BASE_URL
 
+RUN echo "E404:404.html" > public/httpd.conf
+
 
 # Final stage for app image
-FROM docker.io/pierrezemb/gostatic:latest
+FROM docker.io/lipanski/docker-static-website:2.3.1
 
-COPY --from=build /app/public /srv/http
-
-CMD ["-enable-logging"]
+COPY --from=build /app/public .
