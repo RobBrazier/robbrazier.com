@@ -28,6 +28,10 @@ soft_limit = 450
 size = 'shared-cpu-1x'
 
 [[statics]]
+guest_path = '/srv/http/favicon.ico'
+url_prefix = '/favicon.ico'
+
+[[statics]]
 guest_path = '/srv/http/css'
 url_prefix = '/css'
 
