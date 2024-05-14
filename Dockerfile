@@ -18,4 +18,4 @@ FROM docker.io/pierrezemb/gostatic:latest
 
 COPY --from=build /app/public /srv/http
 
-CMD ["-enable-logging", "-fallback", "/404.html"]
+CMD ["-enable-logging"]
