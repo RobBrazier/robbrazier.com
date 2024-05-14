@@ -17,3 +17,5 @@ RUN hugo -b $BASE_URL
 FROM docker.io/pierrezemb/gostatic:latest
 
 COPY --from=build /app/public /srv/http
+
+CMD ["-enable-logging"]
