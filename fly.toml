@@ -7,6 +7,12 @@ BASE_URL = "https://robbrazier.com"
 [deploy]
 strategy = "rolling"
 
+[env]
+SERVER_LOG_LEVEL = "info"
+SERVER_IGNORE_HIDDEN_FILES = "true"
+SERVER_LOG_REMOTE_ADDRESS = "true"
+SERVER_PORT = "3000"
+
 [http_service]
 internal_port = 3000
 force_https = true
@@ -28,13 +34,13 @@ soft_limit = 450
 size = 'shared-cpu-1x'
 
 [[statics]]
-guest_path = '/srv/http/css'
+guest_path = '/public/css'
 url_prefix = '/css'
 
 [[statics]]
-guest_path = '/srv/http/images'
+guest_path = '/public/images'
 url_prefix = '/images'
 
 [[statics]]
-guest_path = '/srv/http/img'
+guest_path = '/public/img'
 url_prefix = '/img'

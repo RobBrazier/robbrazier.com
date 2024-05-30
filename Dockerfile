@@ -16,6 +16,6 @@ RUN echo "E404:404.html" > public/httpd.conf
 
 
 # Final stage for app image
-FROM docker.io/lipanski/docker-static-website:2.3.1
+FROM docker.io/joseluisq/static-web-server:2
 
-COPY --from=build /app/public .
+COPY --from=build /app/public /public
