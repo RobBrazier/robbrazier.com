@@ -13,7 +13,7 @@ jobs:
       - name: Build Site
         run: ./hugow -b https://www.robbrazier.com
       - name: Deploy to Edge Storage
-        uses: own3d/bunny-action@main
+        uses: own3d/bunny-action@0.2.2
         env:
           BUNNY_API_ACCESS_KEY: ${{ secrets.BUNNY_API_ACCESS_KEY }}
           BUNNY_STORAGE_USERNAME: robbrazier-com
