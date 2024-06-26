@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build Site
-        run: ./hugow -b robbrazier.b-cdn.net
+        run: ./hugow -b https://robbrazier.b-cdn.net
       - name: Deploy to Edge Storage
         uses: own3d/bunny-action@main
         env:
