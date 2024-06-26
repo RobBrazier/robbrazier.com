@@ -12,8 +12,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build Site
         run: ./hugow -b https://www.robbrazier.com
-      - name: Configure Error Pages
-        run: cd public && mkdir -p bunnycdn_errors && mv 404.html bunnycdn_errors/
       - name: Deploy to Edge Storage
         uses: own3d/bunny-action@main
         env:
