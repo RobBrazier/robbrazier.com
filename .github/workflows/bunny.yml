@@ -15,7 +15,7 @@ jobs:
       - name: Configure Error Pages
         run: mkdir -p public/bunnycdn_errors && mv 404.html public/bunnycdn_errors/
       - name: Deploy to Edge Storage
-        uses: own3d/bunny-action@v0.2.2
+        uses: own3d/bunny-action@main
         env:
           BUNNY_API_ACCESS_KEY: ${{ secrets.BUNNY_API_ACCESS_KEY }}
           BUNNY_STORAGE_USERNAME: robbrazier-com
