@@ -1,0 +1,24 @@
+name: Bunny Deploy
+on:
+  push:
+    branches:
+      - master # change to main if needed
+jobs:
+  deploy:
+    name: Deploy app
+    runs-on: ubuntu-latest
+    concurrency: bunny-group # optional: ensure only one action runs at a time
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Site
+        run: ./hugow -b robbrazier.b-cdn.net
+      - name: Deploy to Edge Storage
+        uses: own3d/bunny-action@main
+        env:
+          BUNNY_API_ACCESS_KEY: ${{ secrets.BUNNY_API_ACCESS_KEY }}
+          BUNNY_STORAGE_USERNAME: robbrazier-com
+          BUNNY_STORAGE_PASSWORD: ${{ secrets.BUNNY_STORAGE_PASSWORD }}
+          # BUNNY_STORAGE_PATH: some_target_edge_dir (optional)
+          BUNNY_PULL_ZONE_ID: ${{ secrets.BUNNY_PULL_ZONE_ID }}
+        with:
+          args: deploy --dir=public
