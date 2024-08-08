@@ -1,7 +1,7 @@
 providers = ['staticfile']
 
-[phases.setup]
-nixPkgs = ['hugo']
+# [phases.setup]
+# nixPkgs = ['hugo']
 
 [phases.build]
-cmds = ['hugo --minify']
+cmds = ['./hugow --minify']
