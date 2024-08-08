@@ -1,4 +1,4 @@
-providers = ['go']
+providers = ['static']
 
 [phases.setup]
 nixPkgs = ['hugo']
