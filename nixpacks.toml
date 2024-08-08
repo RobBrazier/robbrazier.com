@@ -1,5 +1,7 @@
+providers = ['go']
+
 [phases.setup]
 nixPkgs = ['hugo']
 
 [phases.build]
-cmds = ['hugo -b /']
+cmds = ['hugo --minify']
