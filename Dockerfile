@@ -8,7 +8,7 @@ WORKDIR /app
 
 COPY . .
 
-ARG BASE_URL=''
+ARG BASE_URL='/'
 
 RUN hugo -b $BASE_URL
 
