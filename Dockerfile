@@ -1,6 +1,6 @@
 # syntax = docker/dockerfile:1
 
-FROM docker.io/alpine:latest as build
+FROM docker.io/alpine:latest AS build
 
 RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community hugo
 
