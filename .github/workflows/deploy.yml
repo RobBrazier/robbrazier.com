@@ -23,6 +23,7 @@ jobs:
           echo "has_pr=$([[ $PR_COUNT -gt 0 ]] && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   build:
     needs: check_pr
     if: ${{ needs.check_pr.outputs.has_pr == 'false' || github.event_name == 'pull_request' }}
@@ -54,26 +55,19 @@ jobs:
             type=ref,event=branch
             type=ref,event=pr,prefix=pr-
 
-      - name: Build Docker image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: false
-          load: true
-          tags: ${{ steps.meta.outputs.tags }}
-
       - name: Login to GitHub Container Registry
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Push Docker image
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
-        run: |
-          echo "${{ steps.meta.outputs.tags }}" | xargs -n 1 docker push
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: ${{ github.ref == 'refs/heads/master' }}
+          tags: ${{ steps.meta.outputs.tags }}
 
   deploy:
     needs: build
