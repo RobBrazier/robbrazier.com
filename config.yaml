@@ -1,10 +1,7 @@
-baseURL: ""
+baseURL: "https://www.robbrazier.com"
 title: Rob Brazier
 theme: maverick
 languageCode: en
-
-author:
-  name: Rob Brazier
 
 params:
   author: Rob Brazier
