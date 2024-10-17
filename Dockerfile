@@ -8,9 +8,7 @@ WORKDIR /app
 
 COPY . .
 
-ARG BASE_URL='/'
-
-RUN hugo -b $BASE_URL
+RUN hugo
 
 # Final stage for app image
 FROM docker.io/joseluisq/static-web-server:2
