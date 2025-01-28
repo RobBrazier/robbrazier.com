@@ -32,7 +32,7 @@ jobs:
       - uses: actions/download-artifact@v4.1.8
         with:
           name: public
-      - uses: jdx/mise-action@v2.1.11
+      - run: ls -la public
       - uses: ayeressian/bunnycdn-storage-deploy@v2.2.5
         with:
           source: "public"
