@@ -31,11 +31,10 @@ jobs:
       - uses: actions/download-artifact@v4.1.8
         with:
           name: public
-      - run: pwd && ls -la
+          path: public
       - uses: ayeressian/bunnycdn-storage-deploy@v2.2.5
         with:
-          source: "${{ github.workspace }}/public"
-          destination: ""
+          source: "public"
           storageZoneName: "${{ secrets.BUNNY_STORAGE }}"
           storagePassword: "${{ secrets.BUNNY_API_STORAGE }}"
           accessKey: "${{ secrets.BUNNY_API_KEY }}"
