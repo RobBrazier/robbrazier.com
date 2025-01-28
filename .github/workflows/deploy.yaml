@@ -1,0 +1,46 @@
+name: deploy
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - uses: jdx/mise-action@v2.1.11
+      - run: hugo build
+      - uses: actions/upload-artifact@v4.6.0
+        with:
+          name: public
+          path: ./public
+          if-no-files-found: error
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - uses: actions/download-artifact@v4.1.8
+        with:
+          name: public
+      - uses: jdx/mise-action@v2.1.11
+      - uses: ayeressian/bunnycdn-storage-deploy@v2.2.5
+        with:
+          source: "public"
+          destination: ""
+          storageZoneName: "${{ secrets.BUNNY_STORAGE }}"
+          storagePassword: "${{ secrets.BUNNY_API_STORAGE }}"
+          accessKey: "${{ secrets.BUNNY_API_KEY }}"
+          pullZoneId: "${{ secrets.BUNNY_ZONE_ID }}"
+          upload: "true"
+          remove: "true"
+          purgePullZone: "true"
