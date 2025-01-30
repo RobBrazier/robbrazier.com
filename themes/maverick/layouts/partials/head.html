@@ -18,8 +18,8 @@
     {{ $styles_extra := resources.Get "scss/_extra.scss" | toCSS (dict "outputStyle" "compressed") }}
     {{ $styles_css := slice $styles $styles_extra | resources.Concat "css/styles.css" | minify }}
     <link rel="stylesheet" href="{{ $styles_css.Permalink }}">
-    <script defer data-website-id="193b303e-85fd-4e0d-980d-41c2f569ae7f" data-domain="robbrazier.com"
-        src="https://psychic-couscous.b-cdn.net/js/script.js"></script>
+    <script defer data-website-id="193b303e-85fd-4e0d-980d-41c2f569ae7f"
+        src="https://psychic-couscous.b-cdn.net/script.js"></script>
 
     {{ if .IsHome -}}
     <script type="application/ld+json">
