@@ -1,0 +1,24 @@
+baseURL = 'https://robbrazier.com'
+languageCode = 'en-gb'
+title = 'Rob Brazier'
+enableRobotsTXT = true
+
+
+[params]
+items = 20
+[params.author]
+name = 'Rob Brazier'
+
+[outputs]
+home = ['html']
+section = ['html', 'rss']
+taxonomy = ['html']
+term = ['html']
+
+[menus]
+[[menus.main]]
+name = 'Posts'
+url = '/posts'
+
+[minify]
+minifyOutput = true

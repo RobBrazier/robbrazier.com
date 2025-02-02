@@ -3,7 +3,4 @@ public/
 resources/_gen/
 .hugo/*
 !.hugo/version
-.vercel
 .hugo_build.lock
-# Local Netlify folder
-.netlify

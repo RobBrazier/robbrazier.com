@@ -1,0 +1,90 @@
+:root {
+  --font-clr: #1e2021;
+  --bg-clr: #F5F5F5;
+}
+
+@import url(https://fonts.bunny.net/css?family=poppins:400,600);
+
+@media(prefers-color-scheme: dark) {
+  :root {
+    --font-clr: #E8E6E3;
+    --bg-clr: #1e2021;
+  }
+}
+
+body {
+  font-family: Poppins, Roboto, Helvetica, Arial, sans-serif;
+  size: 1rem;
+  line-height: 1.6;
+  background-color: var(--bg-clr);
+  color: var(--font-clr);
+  margin-inline: auto;
+  padding-inline: 2rem;
+  max-width: 80ch;
+}
+
+img.avatar {
+  position: relative;
+  border-radius: 100%;
+  width: 7.5rem;
+  height: 7.5rem;
+  float: right;
+  margin-left: 1rem;
+}
+
+a {
+  color: var(--font-clr);
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  padding-block: 1rem;
+  a {
+    text-decoration: none;
+  }
+
+  .logo {
+    font-weight: bold;
+    flex: 1;
+    font-size: 1.2rem;
+  }
+
+  .pages {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+h1.post-title {
+  margin-bottom: 0;
+}
+
+.post-date {
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline;
+    &:not(:last-child)::after {
+      content: "•";
+      margin-inline: 0.5rem;
+    }
+  }
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-block: 1rem;
+}

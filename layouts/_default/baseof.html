@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>
+		{{ block "title" . }}
+		{{ .Site.Title }}
+		{{ end }}
+	</title>
+	{{ template "_internal/opengraph.html" . }}
+	{{ template "_internal/schema.html" . }}
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	{{ with .OutputFormats.Get "rss" -}}
+	<link rel={{.Rel}} type={{.MediaType.Type}} href={{.Permalink}} title={{site.Title}}>
+	{{ end }}
+	{{ $style := resources.Get "css/style.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}">
+	<link rel="icon" href="/favicon.ico">
+</head>
+
+<body>
+	<header>
+		<a class="logo" href="{{ absURL "" }}">{{ .Site.Title }}</a>
+		<ul class="pages">
+			{{ range .Site.Menus.main }}
+			<li><a href="{{ absURL .URL }}">{{ .Name }}</a></li>
+			{{ end }}
+		</ul>
+	</header>
+	<main>
+		{{ block "main" . }}{{ end }}
+	</main>
+</body>
+
+</html>

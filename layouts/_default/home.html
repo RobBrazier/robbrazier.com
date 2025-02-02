@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{ .Content }}
+<ul class="social-links">
+	{{ range .Site.Data.links }}
+	<li><a href="{{ .url }}" target="_blank">{{ .name }}</a></li>
+	{{ end }}
+</ul>
+<hr>
+<h2>Projects</h2>
+<section>
+	{{ range .Site.Data.projects }}
+	<p><a href="{{if .repo}}https://github.com/RobBrazier/{{.repo}}{{else}}{{.link}}{{end}}">{{ .title }}</a> - {{
+		.description }}</p>
+	{{ end }}
+</section>
+{{ if gt (len ( where .Site.RegularPages "Section" "posts" )) 0 }}
+<hr>
+<h2>Latest Post</h2>
+<section>
+	{{ range (first .Site.Params.items (where .Site.RegularPages "Section" "posts" ).ByDate.Reverse) }}
+	<p>
+		<time datetime={{ dateFormat "2006-01-02" .Date }}>
+			{{ dateFormat "January 2, 2006" .Date }}
+		</time>
+		&nbsp;
+		<a href="{{ .Permalink }}">{{ .Title }}</a>
+	<p>
+		{{ end }}
+</section>
+{{ end }}
+{{ end }}

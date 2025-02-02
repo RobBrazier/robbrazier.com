@@ -1,0 +1,20 @@
+{{ define "title" }}
+{{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+<h1 class="post-title">{{ .Title }}</h1>
+{{ if ne .Section "pages" }}
+<div class="post-date">
+	<span>{{.Date.Format "January 2, 2006"}} </span>
+	{{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
+	&bullet;
+	{{ range $index, $tag := . }}
+	{{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
+	<a href="{{ .Permalink }}">{{ $tag | urlize }}</a>
+	{{- end -}}
+	{{- end -}}
+	{{ end }}
+</div>
+{{ end }}
+{{ .Content }}
+{{ end }}
