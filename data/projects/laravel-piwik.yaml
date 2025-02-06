@@ -1,3 +1,5 @@
 title: Laravel Piwik
 description: A Laravel package to interface with the Piwik API
-repo: Laravel_Piwik
+link: https://github.com/RobBrazier/Laravel_Piwik
+icons:
+  - php

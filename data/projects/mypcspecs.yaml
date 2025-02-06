@@ -1,3 +1,5 @@
 title: My PC Specs
 description: A signature/image generator for PC details for use on forums etc.
 link: https://mypcspecs.io
+icons:
+  - laravel

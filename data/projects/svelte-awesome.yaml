@@ -1,3 +1,5 @@
 title: Svelte Awesome
 description: A Font-Awesome component for Svelte, using inline SVG
-repo: svelte-awesome
+link: https://github.com/RobBrazier/svelte-awesome
+icons:
+  - svelte

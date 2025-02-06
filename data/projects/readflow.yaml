@@ -1,3 +1,5 @@
 title: readflow
 description: A CLI tool to sync books read on a Kobo eReader with Hardcover and Anilist
-repo: readflow
+link: https://github.com/RobBrazier/readflow
+icons:
+  - go

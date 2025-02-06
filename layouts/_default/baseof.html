@@ -17,8 +17,7 @@
 	{{ $style := resources.Get "css/style.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
 	<link rel="stylesheet" href="{{ $style.Permalink }}">
 	<link rel="icon" href="/favicon.ico">
-	<script defer data-website-id="193b303e-85fd-4e0d-980d-41c2f569ae7f"
-		src="https://psychic-couscous.b-cdn.net/script.js"></script>
+	{{ partialCached "hugomods/umami-analytics/index" . .Params.analyze }}
 </head>
 
 <body>

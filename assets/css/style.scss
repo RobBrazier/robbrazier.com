@@ -23,12 +23,15 @@ body {
   max-width: 80ch;
 }
 
-img.avatar {
-  position: relative;
+img.img-fluid {
   border-radius: 100%;
-  width: 7.5rem;
-  height: 7.5rem;
+}
+
+.float-end {
   float: right;
+}
+
+.ms-2 {
   margin-left: 1rem;
 }
 
@@ -66,7 +69,7 @@ h1.post-title {
   margin-bottom: 1rem;
 }
 
-.social-links {
+ul.social-links {
   list-style-type: none;
   display: flex;
   margin: 0;
@@ -81,6 +84,19 @@ h1.post-title {
   }
 }
 
+ul.projects {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+  li > *:not(:first-child)::before {
+      content: "•";
+      margin-inline: 0.5rem;
+  }
+}
+
 hr {
   border: 0;
   height: 0;
@@ -88,3 +104,4 @@ hr {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   margin-block: 1rem;
 }
+

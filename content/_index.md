@@ -1,6 +1,6 @@
 ## Hi! I'm Rob 👋
 
-{{< avatar src="images/avatar.jpg" alt="Rob Brazier" >}}
+![Rob Brazier](/images/avatar.jpg?width=120#float-end)
 
 I'm currently working at Barclays as a Senior Cloud Engineer but have experience writing code in a variety of languages
 such as PHP, JavaScript, Java, Python (oldest to newest) and currently learning Go
