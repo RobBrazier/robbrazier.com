@@ -18,7 +18,7 @@
 <ul class="projects">
 	{{ range .Site.Data.projects }}
 	<li>
-		<a href="{{ .link }}">{{ .title }}</a><span>{{ .description }}</span>
+		<a href="{{ .link }}" target="_blank">{{ .title }}</a><span>{{ .description }}</span>
 		{{- with .icons -}}
 		<span class="icons">
 			{{ range . }}
