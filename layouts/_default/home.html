@@ -20,7 +20,7 @@
 	<li>
 		<a href="{{ .link }}">{{ .title }}</a><span>{{ .description }}</span>
 		{{- with .icons -}}
-		<span>
+		<span class="icons">
 			{{ range . }}
 			{{ $ctx := dict "vendor" "simple-icons" "name" . }}
 			{{ partial "icons/icon" $ctx }}

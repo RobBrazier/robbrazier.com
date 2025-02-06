@@ -95,6 +95,9 @@ ul.projects {
       content: "•";
       margin-inline: 0.5rem;
   }
+  .icons > svg:not(:last-child) {
+    padding-right: 0.25rem;
+  }
 }
 
 hr {

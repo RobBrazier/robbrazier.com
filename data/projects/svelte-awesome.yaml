@@ -3,3 +3,4 @@ description: A Font-Awesome component for Svelte, using inline SVG
 link: https://github.com/RobBrazier/svelte-awesome
 icons:
   - svelte
+  - opensourceinitiative

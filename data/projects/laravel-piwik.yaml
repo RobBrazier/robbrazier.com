@@ -3,3 +3,4 @@ description: A Laravel package to interface with the Piwik API
 link: https://github.com/RobBrazier/Laravel_Piwik
 icons:
   - php
+  - opensourceinitiative
