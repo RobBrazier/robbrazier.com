@@ -1,6 +1,9 @@
 - name: GitHub
   url: https://github.com/RobBrazier
+  icon: github
 - name: Codeberg
   url: https://codeberg.org/RobBrazier
+  icon: codeberg
 - name: Bluesky
   url: https://bsky.app/profile/robbrazier.com
+  icon: bluesky

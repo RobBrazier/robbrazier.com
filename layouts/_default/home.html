@@ -2,7 +2,13 @@
 {{ .Content }}
 <ul class="social-links">
 	{{ range .Site.Data.links }}
-	<li><a href="{{ .url }}" target="_blank">{{ .name }}</a></li>
+	<li>
+		<a href="{{ .url }}" target="_blank">
+			{{ $ctx := dict "vendor" "simple-icons" "name" .icon }}
+			{{ partial "icons/icon" $ctx }}
+			{{ .name }}
+		</a>
+	</li>
 	{{ end }}
 </ul>
 <hr>

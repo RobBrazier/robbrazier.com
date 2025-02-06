@@ -3,7 +3,7 @@
   --bg-clr: #F5F5F5;
 }
 
-@import url(https://fonts.bunny.net/css?family=poppins:400,600);
+@import url(https://fonts.bunny.net/css?family=noto-sans:400,700);
 
 @media(prefers-color-scheme: dark) {
   :root {
@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: Poppins, Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Noto Sans', Roboto, Helvetica, Arial, sans-serif;
   size: 1rem;
   line-height: 1.6;
   background-color: var(--bg-clr);
