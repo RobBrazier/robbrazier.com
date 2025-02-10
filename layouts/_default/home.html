@@ -19,6 +19,7 @@
 	{{ range .Site.Data.projects }}
 	<li>
 		<a href="{{ .link }}" target="_blank">{{ .title }}</a><span>{{ .description }}</span>
+		<!--
 		{{- with .icons -}}
 		<span class="icons">
 			{{ range . }}
@@ -27,6 +28,7 @@
 			{{ end }}
 		</span>
 		{{ end }}
+		-->
 	</li>
 	{{ end }}
 </ul>
