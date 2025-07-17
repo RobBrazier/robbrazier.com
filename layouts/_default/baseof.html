@@ -18,70 +18,24 @@
 	<link rel="stylesheet" href="{{ $style.Permalink }}">
 	<link rel="icon" href="/favicon.ico">
 	{{ partialCached "hugomods/umami-analytics/index" . .Params.analyze }}
+	{{ with resources.Get "js/app.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
+	<script defer src="{{ .Permalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+	{{end}}
 </head>
 
 <body>
 	<header>
-		<a class="logo" href="{{ absURL "" }}">{{ .Site.Title }}</a>
+		<a class="logo" href="{{ .Site.BaseURL }}">{{ .Site.Title}}</a>
 		<ul class="pages">
-			{{ range .Site.Menus.main }}
-			<li><a href="{{ absURL .URL }}">{{ .Name }}</a></li>
-			{{ end }}
+			{{range .Site.Menus.main}}
+			<li><a href="{{ absURL .URL }}">{{ .Name}}</a></li>
+			{{end}}
 		</ul>
 	</header>
 	<main>
-		{{ block "main" . }}{{ end }}
+		{{block "main" . }}{{end}}
 	</main>
 	<script>
-		document.addEventListener('click', handleLinkClick);
-
-		async function handleLinkClick(e) {
-			const link = e.target.closest('a[href]');
-			if (!link || !shouldBoost(link)) return;
-
-			e.preventDefault();
-			try {
-				const response = await fetch(link.href);
-				const html = await response.text();
-				const newDoc = new DOMParser().parseFromString(html, 'text/html');
-
-				const target = document.querySelector(link.dataset.target) || document.body;
-				target.replaceChildren(...newDoc.body.childNodes);
-				history.pushState(null, '', link.href);
-			} catch (error) {
-				window.location.href = link.href; // Fallback on error
-			}
-		}
-
-		function shouldBoost(link) {
-			// Skip if explicitly opted out
-			if (link.hasAttribute('data-no-boost')) return false;
-
-			// Skip if has target attribute (e.g., _blank)
-			if (link.hasAttribute('target')) return false;
-
-			const href = link.getAttribute('href');
-			if (!href) return false;
-
-			// Skip hash links
-			if (href.startsWith('#')) return false;
-
-			try {
-				// Handle absolute URLs
-				if (href.includes('://')) {
-					const url = new URL(href);
-					return url.hostname === window.location.hostname;
-				}
-
-				// Handle relative URLs
-				return true;
-			} catch {
-				return false;
-			}
-		}
-
-		// Handle browser navigation
-		window.addEventListener('popstate', () => window.location.reload());
 	</script>
 </body>
 
