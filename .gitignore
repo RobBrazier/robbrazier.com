@@ -4,3 +4,4 @@ resources/_gen/
 .hugo/*
 !.hugo/version
 .hugo_build.lock
+node_modules/

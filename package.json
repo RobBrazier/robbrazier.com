@@ -1,0 +1,12 @@
+{
+  "name": "robbrazier.com",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "hugo-extended": "^0.148.1"
+  },
+  "devDependencies": {
+    "wrangler": "^4.25.1"
+  }
+}
