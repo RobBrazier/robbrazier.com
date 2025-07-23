@@ -5,6 +5,10 @@
 
 @import url(https://fonts.bunny.net/css?family=noto-sans:400,700);
 
+@view-transition {
+  navigation: auto;
+}
+
 @media(prefers-color-scheme: dark) {
   :root {
     --font-clr: #E8E6E3;
