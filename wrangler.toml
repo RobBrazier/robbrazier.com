@@ -7,5 +7,6 @@ workers_dev = true
 directory = "./public"
 not_found_handling = "404-page"
 
-[observability.logs]
-enabled = true
+[vars]
+BASE_URL = "https://robbrazier.com"
+HUGO_VERSION = "0.148.1"
