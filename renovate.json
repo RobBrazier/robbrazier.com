@@ -23,6 +23,24 @@
 			"addLabels": [
 				"{{ manager }}"
 			]
+		},
+		{
+			"groupName": "hugo",
+			"matchManagers": [
+				"mise"
+			],
+			"matchDepNames": [
+				"aqua:gohugoio/hugo/hugo-extended"
+			]
+		},
+		{
+			"groupName": "hugo",
+			"matchManagers": [
+				"regex"
+			],
+			"matchDepNames": [
+				"hubci/hugo"
+			]
 		}
 	],
 	"customManagers": [
