@@ -1,2 +1,2 @@
 [tools]
-"aqua:hugo-extended" = "0.148.1"
+"aqua:gohugoio/hugo/hugo-extended" = "0.148.1"
