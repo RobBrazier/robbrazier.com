@@ -23,32 +23,18 @@
 			"addLabels": [
 				"{{ manager }}"
 			]
-		},
+		}
+	],
+	"customManagers": [
 		{
-			"description": "Update Hugo Docker image in statichost.yml",
-			"matchManagers": [
-				"dockerfile"
+			"customType": "regex",
+			"datasourceTemplate": "docker",
+			"managerFilePatterns": [
+				"/(^|/|\\.)statichost.yml$/"
 			],
-			"matchPackageNames": [
-				"hubci/hugo"
-			],
-			"matchFileNames": [
-				"statichost.yml"
-			],
-			"groupName": "Hugo updates"
-		},
-		{
-			"description": "Update Hugo version in mise.toml",
-			"matchManagers": [
-				"aqua"
-			],
-			"matchPackageNames": [
-				"gohugoio/hugo"
-			],
-			"matchFileNames": [
-				"mise.toml"
-			],
-			"groupName": "Hugo updates"
+			"matchStrings": [
+				"image: (?<depName>.*?):(?<currentValue>[\\w+\\.\\-*]*)"
+			]
 		}
 	]
 }
