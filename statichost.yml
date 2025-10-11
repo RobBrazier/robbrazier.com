@@ -1,3 +1,3 @@
-image: hubci/hugo:0.148.1
+image: hubci/hugo:0.151.0
 command: hugo -b $BASE_URL
 public: public
