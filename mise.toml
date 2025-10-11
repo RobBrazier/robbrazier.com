@@ -1,5 +1,2 @@
 [tools]
-bun = "latest"
-
-[env]
-_.path = "node_modules/.bin"
+hugo-extended = "0.148.1"
