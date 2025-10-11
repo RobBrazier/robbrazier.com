@@ -41,6 +41,12 @@
 			"matchDepNames": [
 				"hubci/hugo"
 			]
+		},
+		{
+			"matchDatasources": [
+				"docker"
+			],
+			"pinDigests": false
 		}
 	],
 	"customManagers": [
