@@ -31,8 +31,8 @@
 	<main>
 		{{block "main" . }}{{end}}
 	</main>
-	{{ $counter := resources.Get "js/count.js" | resources.Minify | resources.Fingerprint }}
-	<script data-goatcounter="/count" async src="{{ $counter.Permalink }}"></script>
+	{{ $counter := resources.Get "js/count.js" | resources.Minify }}
+	<script data-goatcounter="/count">{{ $counter.Content | safeJS }}</script>
 </body>
 
 </html>
