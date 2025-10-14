@@ -31,8 +31,8 @@
 	<main>
 		{{block "main" . }}{{end}}
 	</main>
-	<script>
-	</script>
+	{{ $counter := resources.Get "js/count.js" | resources.Minify | resources.Fingerprint }}
+	<script data-goatcounter="https://stats.robbrazier.com/count" async src="{{ $counter.Permalink }}"></script>
 </body>
 
 </html>
