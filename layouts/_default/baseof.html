@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<title>
 		{{ with .Title }}
-		{{ . }} - 
+		{{ . }} -
 		{{ end }}
 		{{ .Site.Title }}
 	</title>
@@ -17,7 +17,7 @@
 	{{ end }}
 	{{ $style := resources.Get "css/style.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
 	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
-	<link rel="icon" href="/favicon.ico">
+	{{ partial "seo/modules/favicons/index" . }}
 </head>
 
 <body>
