@@ -1,6 +1,6 @@
 module robbrazier.com
 
-go 1.25.3
+go 1.25.1
 
 require (
 	github.com/hugomods/icons/vendors/simple-icons v1.1.1 // indirect
