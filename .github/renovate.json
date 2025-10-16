@@ -39,7 +39,7 @@
 				"custom.regex"
 			],
 			"matchDepNames": [
-				"hubci/hugo"
+				"ghcr.io/gohugoio/hugo"
 			]
 		},
 		{
