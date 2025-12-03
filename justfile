@@ -1,3 +1,9 @@
+serve:
+	hugo serve
+
+build:
+	hugo build
+
 update-hugo:
 	#!/usr/bin/env bash
 
@@ -13,6 +19,3 @@ update-hugo:
 	sed -i "s!$image:.*!$image:$latestTag!" $file
 	printf "$file after => "
 	grep "$image" $file
-
-build:
-	hugo build
