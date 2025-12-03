@@ -1,0 +1,15 @@
+pre-push:
+  jobs:
+    - name: check build
+      run: hugo build -M --noBuildLock --ignoreCache
+
+pre-commit:
+  parallel: true
+  jobs:
+    - name: hugo mod tidy
+      stage_fixed: true
+      run: hugo mod tidy
+
+output:
+  - success
+  - summary

@@ -1,2 +1,7 @@
 [tools]
-"aqua:gohugoio/hugo/hugo-extended" = "0.152.2"
+hugo-extended = "0.152.2"
+just = "latest"
+lefthook = "latest"
+
+[hooks]
+postinstall = "lefthook install"
