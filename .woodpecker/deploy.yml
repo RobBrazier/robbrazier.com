@@ -1,15 +1,20 @@
 when:
-  branch: main
+  - branch: main
+    event: push
 
 steps:
   - name: build
     image: ghcr.io/gohugoio/hugo:v0.154.5
+    when:
+      - event: push
     environment:
       BASE_URL: https://robbrazier.com
     commands:
       - hugo build --gc -b $BASE_URL
   - name: deploy
     image: ghcr.io/astral-sh/uv:python3.12-alpine
+    when:
+      - event: push
     environment:
       BUNNY_API_KEY:
         from_secret: BUNNY_API_KEY
