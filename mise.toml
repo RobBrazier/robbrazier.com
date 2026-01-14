@@ -1,5 +1,4 @@
 [tools]
-"github:railwayapp/railpack" = "latest"
 hugo-extended = "0.154.5"
 just = "latest"
 lefthook = "latest"

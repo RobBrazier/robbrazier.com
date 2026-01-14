@@ -12,7 +12,6 @@ update:
 	version="${latestTag#v}"
 	mise use --pin "hugo-extended@$version"
 
-	# statichost.yml
 	file="statichost.yml"
 	image="ghcr.io/gohugoio/hugo"
 	printf "$file before => "
@@ -21,8 +20,7 @@ update:
 	printf "$file after => "
 	grep "$image" $file
 
-	# Dockerfile
-	file="Dockerfile"
+	file=".woodpecker/deploy.yml"
 	image="ghcr.io/gohugoio/hugo"
 	printf "$file before => "
 	grep "$image" $file
